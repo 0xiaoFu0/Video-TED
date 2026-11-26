@@ -1,0 +1,22 @@
+{
+  "schema_version": "ar_hierarchy_think_v1",
+  "rows": 4676,
+  "classes": 51,
+  "media_checked": false,
+  "source_sha256": {
+    "train.rlsd.jsonl": "392a94cbef1fd113e0537604bb2408554c78ba22b910ff261c9b7c21f4604403",
+    "train.sft.jsonl": "8efe3e15b36d7adc5333b92e3c2ae907f6f40a286796d7747b0bd43bbf57e3e9"
+  },
+  "output_sha256": {
+    "train.rlsd.think.jsonl": "0bad99fd1c3bd036f9ed87157a311f53d63440726880515029778e78800a6fa9",
+    "train.sft.think.jsonl": "b19eaae4e142583eb4a0ff9164146fed67e97ce88642281cbec7a6838024a306"
+  },
+  "converter_sha256": "ebd1519901e8bbf58d4744cb57a59779097552e674f6920f4673b91b2ceafc85",
+  "original_order_preserved": true,
+  "hierarchy_body_preserved": true,
+  "teacher_context_preserved": true,
+  "labels_and_media_preserved": true,
+  "reference_status_preserved": true,
+  "filtered_rows": 0,
+  "resplit": false
+}

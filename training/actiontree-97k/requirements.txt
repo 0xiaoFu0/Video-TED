@@ -1,0 +1,31 @@
+accelerate
+codetiming
+datasets==4.4.1
+huggingface-hub==0.36.2
+# flash-attn>=2.4.3
+liger-kernel
+mathruler
+numpy
+omegaconf
+pandas
+peft
+pillow
+pyarrow>=15.0.0
+pylatexenc
+qwen-vl-utils[decord]==0.0.14
+ray[default]==2.56.1
+tensordict==0.10.0
+torchdata==0.11.0
+transformers==4.57.3
+vllm==0.11.0
+torch==2.8.0
+torchvision==0.23.0
+wandb
+tensorboard
+# For Reward
+rouge_score
+math_verify
+mathruler
+psutil
+packaging
+safetensors

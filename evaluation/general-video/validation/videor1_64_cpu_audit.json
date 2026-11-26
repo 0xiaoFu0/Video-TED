@@ -1,0 +1,314 @@
+{
+  "checked_on": "2026-10-15",
+  "source_sha256": "5e65d9c4b15050d841a075df6aeefd5eb13ee0abf2527a325af8bef8b30bca42",
+  "profile": "videor1_64",
+  "settings": {
+    "think_mode": 1,
+    "n": 1,
+    "temperature": 0.01,
+    "top_p": 0.001,
+    "max_new_tokens": 1024,
+    "max_model_len": 16384,
+    "repetition_penalty": 1.0,
+    "fps": 2.0,
+    "min_frames": 4,
+    "min_pixels": 100352,
+    "max_pixels": 200704
+  },
+  "references": {
+    "paper": "https://arxiv.org/html/2503.21776v4#S4.SS1",
+    "prompt_and_generation": "https://github.com/tulerfeng/Video-R1/blob/main/src/eval_bench.py",
+    "sampling": "https://github.com/tulerfeng/Video-R1/blob/main/src/qwen-vl-utils/src/qwen_vl_utils/vision_process.py",
+    "checked_on": "2026-10-15",
+    "temperature_note": "Uses paper/README temperature 0.01; checked upstream eval_bench.py uses 0.1.",
+    "coverage_note": "Official local benchmark annotations; MVBench clips retained; TempCompass native MCQ only.",
+    "runtime_note": "Uses this package's current vLLM adapter, decoder and deterministic scorer; not an exact upstream reproduction."
+  },
+  "paired_mock_runs": {
+    "base_smoke": {
+      "n_total": 10,
+      "n_done": 10,
+      "complete": true,
+      "is_mock": true,
+      "datasets": {
+        "mvbench": {
+          "annotation_questions": 4000,
+          "selected_questions": 5,
+          "official_expected_questions": 4000,
+          "scope": "partial_or_nonstandard",
+          "annotation_groups": {
+            "Action Sequence": 200,
+            "Action Prediction": 200,
+            "Action Antonym": 200,
+            "Fine-grained Action": 200,
+            "Unexpected Action": 200,
+            "Object Existence": 200,
+            "Object Interaction": 200,
+            "Object Shuffle": 200,
+            "Moving Direction": 200,
+            "Action Localization": 200,
+            "Scene Transition": 200,
+            "Action Count": 200,
+            "Moving Count": 200,
+            "Moving Attribute": 200,
+            "State Change": 200,
+            "Fine-grained Pose": 200,
+            "Character Order": 200,
+            "Egocentric Navigation": 200,
+            "Episodic Reasoning": 200,
+            "Counterfactual Inference": 200
+          },
+          "data_dir": "/private/tmp/general-video-eval-mvbench-official-audit"
+        },
+        "videomme": {
+          "annotation_questions": 2700,
+          "selected_questions": 5,
+          "official_expected_questions": 2700,
+          "scope": "partial_or_nonstandard",
+          "annotation_groups": {
+            "short": 900,
+            "medium": 900,
+            "long": 900
+          },
+          "data_dir": "/private/tmp/general-video-eval-pair-v110/videomme"
+        }
+      },
+      "eval_profile": "videor1_64",
+      "frame_caps": {
+        "mvbench": 64,
+        "videomme": 64
+      }
+    },
+    "ours_smoke": {
+      "n_total": 10,
+      "n_done": 10,
+      "complete": true,
+      "is_mock": true,
+      "datasets": {
+        "mvbench": {
+          "annotation_questions": 4000,
+          "selected_questions": 5,
+          "official_expected_questions": 4000,
+          "scope": "partial_or_nonstandard",
+          "annotation_groups": {
+            "Action Sequence": 200,
+            "Action Prediction": 200,
+            "Action Antonym": 200,
+            "Fine-grained Action": 200,
+            "Unexpected Action": 200,
+            "Object Existence": 200,
+            "Object Interaction": 200,
+            "Object Shuffle": 200,
+            "Moving Direction": 200,
+            "Action Localization": 200,
+            "Scene Transition": 200,
+            "Action Count": 200,
+            "Moving Count": 200,
+            "Moving Attribute": 200,
+            "State Change": 200,
+            "Fine-grained Pose": 200,
+            "Character Order": 200,
+            "Egocentric Navigation": 200,
+            "Episodic Reasoning": 200,
+            "Counterfactual Inference": 200
+          },
+          "data_dir": "/private/tmp/general-video-eval-mvbench-official-audit"
+        },
+        "videomme": {
+          "annotation_questions": 2700,
+          "selected_questions": 5,
+          "official_expected_questions": 2700,
+          "scope": "partial_or_nonstandard",
+          "annotation_groups": {
+            "short": 900,
+            "medium": 900,
+            "long": 900
+          },
+          "data_dir": "/private/tmp/general-video-eval-pair-v110/videomme"
+        }
+      },
+      "eval_profile": "videor1_64",
+      "frame_caps": {
+        "mvbench": 64,
+        "videomme": 64
+      }
+    },
+    "base_full": {
+      "n_total": 6700,
+      "n_done": 6700,
+      "complete": true,
+      "is_mock": true,
+      "datasets": {
+        "mvbench": {
+          "annotation_questions": 4000,
+          "selected_questions": 4000,
+          "official_expected_questions": 4000,
+          "scope": "full",
+          "annotation_groups": {
+            "Action Sequence": 200,
+            "Action Prediction": 200,
+            "Action Antonym": 200,
+            "Fine-grained Action": 200,
+            "Unexpected Action": 200,
+            "Object Existence": 200,
+            "Object Interaction": 200,
+            "Object Shuffle": 200,
+            "Moving Direction": 200,
+            "Action Localization": 200,
+            "Scene Transition": 200,
+            "Action Count": 200,
+            "Moving Count": 200,
+            "Moving Attribute": 200,
+            "State Change": 200,
+            "Fine-grained Pose": 200,
+            "Character Order": 200,
+            "Egocentric Navigation": 200,
+            "Episodic Reasoning": 200,
+            "Counterfactual Inference": 200
+          },
+          "data_dir": "/private/tmp/general-video-eval-mvbench-official-audit"
+        },
+        "videomme": {
+          "annotation_questions": 2700,
+          "selected_questions": 2700,
+          "official_expected_questions": 2700,
+          "scope": "full",
+          "annotation_groups": {
+            "short": 900,
+            "medium": 900,
+            "long": 900
+          },
+          "data_dir": "/private/tmp/general-video-eval-pair-v110/videomme"
+        }
+      },
+      "eval_profile": "videor1_64",
+      "frame_caps": {
+        "mvbench": 64,
+        "videomme": 64
+      }
+    },
+    "ours_full": {
+      "n_total": 6700,
+      "n_done": 6700,
+      "complete": true,
+      "is_mock": true,
+      "datasets": {
+        "mvbench": {
+          "annotation_questions": 4000,
+          "selected_questions": 4000,
+          "official_expected_questions": 4000,
+          "scope": "full",
+          "annotation_groups": {
+            "Action Sequence": 200,
+            "Action Prediction": 200,
+            "Action Antonym": 200,
+            "Fine-grained Action": 200,
+            "Unexpected Action": 200,
+            "Object Existence": 200,
+            "Object Interaction": 200,
+            "Object Shuffle": 200,
+            "Moving Direction": 200,
+            "Action Localization": 200,
+            "Scene Transition": 200,
+            "Action Count": 200,
+            "Moving Count": 200,
+            "Moving Attribute": 200,
+            "State Change": 200,
+            "Fine-grained Pose": 200,
+            "Character Order": 200,
+            "Egocentric Navigation": 200,
+            "Episodic Reasoning": 200,
+            "Counterfactual Inference": 200
+          },
+          "data_dir": "/private/tmp/general-video-eval-mvbench-official-audit"
+        },
+        "videomme": {
+          "annotation_questions": 2700,
+          "selected_questions": 2700,
+          "official_expected_questions": 2700,
+          "scope": "full",
+          "annotation_groups": {
+            "short": 900,
+            "medium": 900,
+            "long": 900
+          },
+          "data_dir": "/private/tmp/general-video-eval-pair-v110/videomme"
+        }
+      },
+      "eval_profile": "videor1_64",
+      "frame_caps": {
+        "mvbench": 64,
+        "videomme": 64
+      }
+    }
+  },
+  "fixture_note": "MVBench official 4000 annotations with placeholder media; Video-MME synthetic 2700 rows/900 placeholder videos. Mock uses fixed A, never ground truth. No CUDA/model inference.",
+  "real_video_decode": {
+    "source_sha256": "d5aedd51e157010341b7dab70d5b7267597ec96e6bbe2ca8504affae180b2297",
+    "shape": [
+      12,
+      308,
+      588,
+      3
+    ],
+    "video_info": {
+      "source_frames": 165,
+      "source_fps": 24.0,
+      "source_duration": 6.875,
+      "sampled_frame_indices": [
+        0,
+        15,
+        30,
+        45,
+        60,
+        75,
+        89,
+        104,
+        119,
+        134,
+        149,
+        164
+      ],
+      "sampled_timestamps": [
+        0.0,
+        0.625,
+        1.25,
+        1.875,
+        2.5,
+        3.125,
+        3.7083333333333335,
+        4.333333333333333,
+        4.958333333333333,
+        5.583333333333333,
+        6.208333333333333,
+        6.833333333333333
+      ],
+      "sampled_frames": 12,
+      "sampled_fps": 1.7454545454545454,
+      "input_start_frame": 0,
+      "input_end_frame": 164,
+      "start": null,
+      "end": null,
+      "sampling": "uniform_fps_floor",
+      "decoder": "opencv",
+      "frame_height": 308,
+      "frame_width": 588,
+      "resize": "pillow_bicubic",
+      "max_pixels": 200704,
+      "min_pixels": 100352,
+      "resize_factor": 28,
+      "media_path": "/private/tmp/tempcompass_completeness_audit/videos/1034419625.mp4"
+    }
+  },
+  "comparison_markdown_sha256": "3248a2e1826e9ee6a791d7ef719ad907b2184ce7863d4404a6ff15793dd8901d",
+  "gpu_validation": "Pending real base/checkpoint smoke on the user server.",
+  "unit_tests": {
+    "passed": 114,
+    "status": "OK",
+    "log_sha256": "253f0d47f4a9686924756a644d4d4a45d7b6e9c63f47cec77e822a202e694a2e"
+  },
+  "paired_resume": {
+    "all_four_runs_zero_remaining": true,
+    "status": "OK"
+  }
+}

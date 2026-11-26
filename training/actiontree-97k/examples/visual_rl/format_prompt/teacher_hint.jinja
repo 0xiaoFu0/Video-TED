@@ -1,0 +1,25 @@
+{#- =========================================================
+   Teacher Hint Injection Template
+   Inject the hint extracted by the Navigator into the teacher reasoning prompt.
+
+   Input variables:
+     - question: Original question text (including task instructions)
+     - hint: Reasoning hint extracted by the Navigator
+     - gt_answer: Reference answer (may be empty during curriculum learning)
+
+   Output: The complete teacher reasoning prompt
+   ========================================================= -#}
+{{ question | trim }}
+
+[Reasoning Hint]
+A reasoning navigator has identified the following key insight for this problem:
+{{ hint | trim }}
+
+{%- if gt_answer %}
+
+[Reference Answer]
+{{ gt_answer | trim }}
+
+{%- endif %}
+
+Using the hint above{% if gt_answer %} and the reference answer{% endif %}, solve the problem step by step. You FIRST think about the reasoning process as an internal monologue enclosed within <thought> </thought> tags. The final answer MUST be enclosed within <answer> </answer> tags.

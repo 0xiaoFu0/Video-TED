@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-03",
+  "tests_passed": 33,
+  "command": "PYTHONDONTWRITEBYTECODE=1 .venv-test/bin/python -m pytest tests/ar -q -p no:cacheprovider",
+  "local_scope": [
+    "CPU data/reward/objective/actor regression tests",
+    "Production video routing with decoder substitute",
+    "Transformers 4.57.3 patch reshape body on synthetic tensors",
+    "Fractional FPS and model-specific temporal position rate",
+    "Production shell launcher with recording Python/Ray substitutes",
+    "Python AST and Bash syntax checks",
+    "Tensor timestamp diagnostic JSON serialization",
+    "MeSD-aligned structured configuration and cosine scheduler execution"
+  ],
+  "server_pending": [
+    "New v3 16-frame/768-token configuration with CPU offload disabled and CUDA graph enabled",
+    "Full training, all-video coverage, and held-out evaluation"
+  ],
+  "data_sha256": {
+    "train.sft.jsonl": "8efe3e15b36d7adc5333b92e3c2ae907f6f40a286796d7747b0bd43bbf57e3e9",
+    "train.rlsd.jsonl": "392a94cbef1fd113e0537604bb2408554c78ba22b910ff261c9b7c21f4604403"
+  },
+  "release": "AR-RLSD_qwen25_mesd_20261003_v3",
+  "server_user_reported_v2": {
+    "evidence": "User-supplied terminal screenshots; no live server access",
+    "single_gpu": "Real video preprocessing and vLLM position comparison; loss=1.677983, grad_norm=48.25",
+    "two_node": "2/2 training steps, 16-rank checkpoint save messages, returned to shell",
+    "scope": "v2 plus check_video JSON serialization fix, before v3 parameter alignment"
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "roots": {
+    "hmdb51": "/gemini-3/space/zwj/LMUData/HMDB51/videos",
+    "ucf101": "/gemini-3/space/zwj/LMUData/UCF101/UCF-101",
+    "ssv2": "/gemini-3/space/zwj/LMUData/SSv2/20bn-something-something-v2",
+    "k400": "/gemini-3/space/datasets/zwj/completed_0930/Kinetics400",
+    "k600": "/gemini-3/space/datasets/zwj/completed_0930/Kinetics600"
+  },
+  "groups": {
+    "hmdb51": [
+      "hmdb51-split1",
+      "hmdb51-split2",
+      "hmdb51-split3"
+    ],
+    "ucf101": [
+      "ucf101-split1",
+      "ucf101-split2",
+      "ucf101-split3"
+    ],
+    "ssv2": [
+      "ssv2-base",
+      "ssv2-novel"
+    ],
+    "k400": [
+      "k400-base",
+      "k400-novel"
+    ],
+    "k600": [
+      "k600-split1",
+      "k600-split2",
+      "k600-split3"
+    ],
+    "base-novel": [
+      "hmdb51-base",
+      "hmdb51-novel",
+      "ucf101-base",
+      "ucf101-novel",
+      "ssv2-base",
+      "ssv2-novel"
+    ],
+    "split1": [
+      "hmdb51-split1",
+      "ucf101-split1"
+    ],
+    "both": [
+      "hmdb51-base",
+      "hmdb51-novel",
+      "ucf101-base",
+      "ucf101-novel",
+      "ssv2-base",
+      "ssv2-novel",
+      "hmdb51-split1",
+      "hmdb51-split2",
+      "hmdb51-split3",
+      "ucf101-split1",
+      "ucf101-split2",
+      "ucf101-split3"
+    ],
+    "splits": [
+      "hmdb51-split1",
+      "hmdb51-split2",
+      "hmdb51-split3",
+      "ucf101-split1",
+      "ucf101-split2",
+      "ucf101-split3"
+    ]
+  },
+  "datasets": {
+    "hmdb51-base": {
+      "dataset": "hmdb51",
+      "entry": "ceval1oss",
+      "upstream_launch": "AScripts/ceval1oss/run_hmdb51_2.sh",
+      "annotations": "AFile/json/hmdb51/val.json",
+      "classes": "AFile/json/hmdb51/train_rephrased.json",
+      "root_env": "HMDB51_ROOT",
+      "rows": 780,
+      "ar_train_overlap": 0
+    },
+    "hmdb51-novel": {
+      "dataset": "hmdb51",
+      "entry": "ceval1oss",
+      "upstream_launch": "AScripts/ceval1oss/run_hmdb51_1.sh",
+      "annotations": "AFile/json/hmdb51/test.json",
+      "classes": "AFile/json/hmdb51/test_rephrased.json",
+      "root_env": "HMDB51_ROOT",
+      "rows": 750,
+      "ar_train_overlap": 0
+    },
+    "ucf101-base": {
+      "dataset": "ucf101",
+      "entry": "ceval1oss",
+      "upstream_launch": "AScripts/ceval1oss/run_ucf_2.sh",
+      "annotations": "AFile/json/ucf101/val.json",
+      "classes": "AFile/json/ucf101/train_rephrased.json",
+      "root_env": "UCF101_ROOT",
+      "rows": 2088
+    },
+    "ucf101-novel": {
+      "dataset": "ucf101",
+      "entry": "ceval1oss",
+      "upstream_launch": "AScripts/ceval1oss/run_ucf_1.sh",
+      "annotations": "AFile/json/ucf101/test.json",
+      "classes": "AFile/json/ucf101/test_rephrased.json",
+      "root_env": "UCF101_ROOT",
+      "rows": 1695
+    },
+    "ssv2-base": {
+      "dataset": "ssv2",
+      "entry": "ceval1oss",
+      "upstream_launch": "AScripts/ceval1oss/run_ssv2_2.sh",
+      "annotations": "AFile/json/SSv2/val.json",
+      "classes": "AFile/json/SSv2/train_rephrased.json",
+      "root_env": "SSV2_ROOT",
+      "rows": 17562
+    },
+    "ssv2-novel": {
+      "dataset": "ssv2",
+      "entry": "ceval1oss",
+      "upstream_launch": "AScripts/ceval1oss/run_ssv2_1.sh",
+      "annotations": "AFile/json/SSv2/test.json",
+      "classes": "AFile/json/SSv2/test_rephrased.json",
+      "root_env": "SSV2_ROOT",
+      "rows": 7215
+    },
+    "k400-base": {
+      "dataset": "k400",
+      "entry": "ceval1oss",
+      "upstream_launch": "AScripts/ceval1oss/run_k400_2.sh",
+      "annotations": "AFile/json/kinetics400/val.json",
+      "classes": "AFile/json/kinetics400/train_rephrased.json",
+      "root_env": "K400_ROOT",
+      "rows": 9883
+    },
+    "k400-novel": {
+      "dataset": "k400",
+      "entry": "ceval1oss",
+      "upstream_launch": "AScripts/ceval1oss/run_k400_1.sh",
+      "annotations": "AFile/json/kinetics400/test.json",
+      "classes": "AFile/json/kinetics400/test_rephrased.json",
+      "root_env": "K400_ROOT",
+      "rows": 9857
+    },
+    "hmdb51-split1": {
+      "dataset": "hmdb51",
+      "entry": "ceval2oss",
+      "upstream_launch": "AScripts/ceval2oss/split_hmdb51_123.sh",
+      "annotations": "AFile/json_split/hmdb51/hmdb_exp_split_1.json",
+      "classes": "AFile/json_split/hmdb51/hmdb_rephrased_classes.json",
+      "root_env": "HMDB51_ROOT",
+      "rows": 1530,
+      "ar_train_overlap": 0
+    },
+    "hmdb51-split2": {
+      "dataset": "hmdb51",
+      "entry": "ceval2oss",
+      "upstream_launch": "AScripts/ceval2oss/split_hmdb51_123.sh",
+      "annotations": "AFile/json_split/hmdb51/hmdb_exp_split_2.json",
+      "classes": "AFile/json_split/hmdb51/hmdb_rephrased_classes.json",
+      "root_env": "HMDB51_ROOT",
+      "rows": 1530,
+      "ar_train_overlap": 1340
+    },
+    "hmdb51-split3": {
+      "dataset": "hmdb51",
+      "entry": "ceval2oss",
+      "upstream_launch": "AScripts/ceval2oss/split_hmdb51_123.sh",
+      "annotations": "AFile/json_split/hmdb51/hmdb_exp_split_3.json",
+      "classes": "AFile/json_split/hmdb51/hmdb_rephrased_classes.json",
+      "root_env": "HMDB51_ROOT",
+      "rows": 1530,
+      "ar_train_overlap": 1311
+    },
+    "hmdb51-full": {
+      "dataset": "hmdb51",
+      "entry": "ceval2oss",
+      "upstream_launch": "AScripts/ceval2oss/split_hmdb51_full.sh",
+      "annotations": "AFile/json_split/hmdb51/hmdb_exp_split_full.json",
+      "classes": "AFile/json_split/hmdb51/hmdb_rephrased_classes.json",
+      "root_env": "HMDB51_ROOT",
+      "rows": 5100,
+      "ar_train_overlap": 3570
+    },
+    "ucf101-split1": {
+      "dataset": "ucf101",
+      "entry": "ceval2oss",
+      "upstream_launch": "AScripts/ceval2oss/split_ucf101_123.sh",
+      "annotations": "AFile/json_split/ucf101/ucf_split_1.json",
+      "classes": "AFile/json_split/ucf101/ucf101_rephrased_classes.json",
+      "root_env": "UCF101_ROOT",
+      "rows": 3783
+    },
+    "ucf101-split2": {
+      "dataset": "ucf101",
+      "entry": "ceval2oss",
+      "upstream_launch": "AScripts/ceval2oss/split_ucf101_123.sh",
+      "annotations": "AFile/json_split/ucf101/ucf_split_2.json",
+      "classes": "AFile/json_split/ucf101/ucf101_rephrased_classes.json",
+      "root_env": "UCF101_ROOT",
+      "rows": 3734
+    },
+    "ucf101-split3": {
+      "dataset": "ucf101",
+      "entry": "ceval2oss",
+      "upstream_launch": "AScripts/ceval2oss/split_ucf101_123.sh",
+      "annotations": "AFile/json_split/ucf101/ucf_split_3.json",
+      "classes": "AFile/json_split/ucf101/ucf101_rephrased_classes.json",
+      "root_env": "UCF101_ROOT",
+      "rows": 3696
+    },
+    "ucf101-full": {
+      "dataset": "ucf101",
+      "entry": "ceval2oss",
+      "upstream_launch": "AScripts/ceval2oss/split_ucf101_full.sh",
+      "annotations": "AFile/json_split/ucf101/ucf_split_full.json",
+      "classes": "AFile/json_split/ucf101/ucf101_rephrased_classes.json",
+      "root_env": "UCF101_ROOT",
+      "rows": 13320
+    },
+    "k600-split1": {
+      "dataset": "k600",
+      "entry": "ceval2oss",
+      "upstream_launch": "AScripts/ceval2oss/split_Kinetics-600-val_1.sh",
+      "annotations": "AFile/json_split/Kinetics-600-val/k600_split_1.json",
+      "classes": "AFile/json_split/Kinetics-600-val/k600_split1_rephrased_classes.json",
+      "root_env": "K600_ROOT",
+      "rows": 7276
+    },
+    "k600-split2": {
+      "dataset": "k600",
+      "entry": "ceval2oss",
+      "upstream_launch": "AScripts/ceval2oss/split_Kinetics-600-val_2.sh",
+      "annotations": "AFile/json_split/Kinetics-600-val/k600_split_2.json",
+      "classes": "AFile/json_split/Kinetics-600-val/k600_split2_rephrased_classes.json",
+      "root_env": "K600_ROOT",
+      "rows": 7226
+    },
+    "k600-split3": {
+      "dataset": "k600",
+      "entry": "ceval2oss",
+      "upstream_launch": "AScripts/ceval2oss/split_Kinetics-600-val_3.sh",
+      "annotations": "AFile/json_split/Kinetics-600-val/k600_split_3.json",
+      "classes": "AFile/json_split/Kinetics-600-val/k600_split3_rephrased_classes.json",
+      "root_env": "K600_ROOT",
+      "rows": 7261
+    }
+  }
+}

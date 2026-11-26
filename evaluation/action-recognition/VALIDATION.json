@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-04",
+  "release": "qwen3_v6_native_video_v1",
+  "target_model": "Qwen3-VL-8B-Instruct",
+  "server_model_path": "/path/to/workspace/models/Qwen/Qwen3-VL-8B-Instruct",
+  "archive_root": "VideoSTAR-Eval-qwen3-v6",
+  "prompt_protocol": "videostar-v6-neutral-single-no-tools-no-path-3split",
+  "cpu_tests": {
+    "tests": 116,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 49.509,
+    "command": "PYTHONDONTWRITEBYTECODE=1 QWEN3_TEST_PROCESSOR=/path/to/official/local/processor python -m pytest tests -q -p no:cacheprovider",
+    "packages": {
+      "torch": "2.8.0",
+      "torchvision": "0.23.0",
+      "transformers": "4.57.3",
+      "av": "15.1.0"
+    }
+  },
+  "official_processor": {
+    "repo": "Qwen/Qwen3-VL-8B-Instruct",
+    "revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+    "files_sha256": {
+      "tokenizer_config.json": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399",
+      "chat_template.json": "5c72a170d2a4a1a3bc5adad2e689ae28138a9700e5b8c96c0266331e86c0acce",
+      "config.json": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+      "tokenizer.json": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7",
+      "generation_config.json": "8469742d1fce0de951c8909b26a2c0c0d8490837ce476efb114da9e0cefc4d44",
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "model.safetensors.index.json": "520b2e05079402e9468a8701d03d1154d14b2599593afb6effa7fb60c1bff070",
+      "video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+    },
+    "model_weights_downloaded": false
+  },
+  "checks": [
+    "Original VideoSTAR-Eval-v5 directory byte-for-byte unchanged against pre-adaptation snapshot",
+    "73 pinned official source/data files, 12 splits, 45893 evaluation items",
+    "Real generated MP4 decoded through torchvision/PyAV; sampled tensors equal to original v6 decoder",
+    "Five decord fixtures verify exact original sampling for short/long videos and fractional FPS",
+    "decord failure preserves torchvision fallback and original timing metadata",
+    "Three resolutions exercise real bicubic resizing with native Qwen3 factor-32 grid and old pixel-budget rules",
+    "All 12 actual prompts processed by official Qwen3-VL processor with real video input, valid grid and context length",
+    "Media paths and per-sample filenames absent from chat text; no class explanations or tools",
+    "Per-video tuple metadata uses original FPS/actual indices; processor resampling and resizing disabled",
+    "Processor file hashes are part of run/resume signature; changed configuration invalidates resume",
+    "Exact confirmed model path; separate smoke/full run names; full model table remains guarded",
+    "Existing eight-process orchestration, resume, complete-only merge, scoring and export tests pass",
+    "Shell syntax checked for run_qwen3.sh and run_8gpu.sh"
+  ],
+  "known_limitations": [
+    "No local vLLM/CUDA model inference; server smoke is required before full evaluation",
+    "Not a real remote-video corpus decoding audit or a complete pretrained-model numerical validation",
+    "Native Qwen3 grid/timestamps/chat template differ from Qwen2.5; identical frames/pixel-budget rules do not imply identical visual tokens",
+    "Default new results directory intentionally avoids merging incompatible source/input manifests into old v6 models.json",
+    "Original reference training overlap and official HMDB annotation conflicts remain as documented"
+  ],
+  "runtime_interface_sources": [
+    "https://github.com/QwenLM/Qwen3-VL#new-qwen-vl-utils-usage",
+    "https://docs.vllm.ai/en/v0.11.0/api/vllm/model_executor/models/qwen3_vl.html"
+  ]
+}

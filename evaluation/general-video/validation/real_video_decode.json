@@ -1,0 +1,104 @@
+{
+  "source": "/private/tmp/general-video-eval-real-video/3396473605_reverse.mp4",
+  "opencv": "5.0.0",
+  "checks": [
+    {
+      "benchmark": "tempcompass",
+      "shape": [
+        8,
+        364,
+        672,
+        3
+      ],
+      "video_info": {
+        "source_frames": 120,
+        "source_fps": 29.97,
+        "source_duration": 4.004004004004004,
+        "sampled_frame_indices": [
+          0,
+          17,
+          34,
+          51,
+          68,
+          85,
+          102,
+          119
+        ],
+        "sampled_timestamps": [
+          0.0,
+          0.5672339005672339,
+          1.1344678011344678,
+          1.7017017017017018,
+          2.2689356022689355,
+          2.8361695028361695,
+          3.4034034034034035,
+          3.9706373039706375
+        ],
+        "sampled_frames": 8,
+        "sampled_fps": 1.998,
+        "input_start_frame": 0,
+        "input_end_frame": 119,
+        "start": null,
+        "end": null,
+        "sampling": "uniform",
+        "decoder": "opencv",
+        "frame_height": 364,
+        "frame_width": 672,
+        "resize": "pillow_bicubic",
+        "max_pixels": 262144,
+        "min_pixels": 3136,
+        "resize_factor": 28,
+        "media_path": "/private/tmp/general-video-eval-real-video/3396473605_reverse.mp4"
+      }
+    },
+    {
+      "benchmark": "mvbench",
+      "shape": [
+        8,
+        364,
+        672,
+        3
+      ],
+      "video_info": {
+        "source_frames": 120,
+        "source_fps": 29.97,
+        "source_duration": 4.004004004004004,
+        "sampled_frame_indices": [
+          7,
+          9,
+          11,
+          13,
+          15,
+          16,
+          18,
+          20
+        ],
+        "sampled_timestamps": [
+          0.2335669002335669,
+          0.3003003003003003,
+          0.3670337003670337,
+          0.4337671004337671,
+          0.5005005005005005,
+          0.5338672005338673,
+          0.6006006006006006,
+          0.6673340006673341
+        ],
+        "sampled_frames": 8,
+        "sampled_fps": 14.985,
+        "input_start_frame": 7,
+        "input_end_frame": 22,
+        "start": 0.25,
+        "end": 0.75,
+        "sampling": "mvbench",
+        "decoder": "opencv",
+        "frame_height": 364,
+        "frame_width": 672,
+        "resize": "pillow_bicubic",
+        "max_pixels": 262144,
+        "min_pixels": 3136,
+        "resize_factor": 28,
+        "media_path": "/private/tmp/general-video-eval-real-video/3396473605_reverse.mp4"
+      }
+    }
+  ]
+}

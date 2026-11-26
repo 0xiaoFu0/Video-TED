@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-05",
+  "type": "additive_cpu_postprocessing_patch",
+  "scoring_protocol": "v6-answer-tags-or-exact-final-label-v1",
+  "cpu_regression_tests": {
+    "passed": 34,
+    "failed": 0,
+    "seconds": 2.2
+  },
+  "existing_release_files_unchanged": 122,
+  "gpu_inference_required": false,
+  "remote_run_rescored_locally": false,
+  "checks": [
+    "Screenshot-style missing-tag final labels recover without ground truth input",
+    "Incorrect final labels remain incorrect; all samples remain in the denominator",
+    "Conflicting tags, malformed tags, prose-only matches and truncated bare labels are not accepted",
+    "Twelve-split fixture exports separate original strict and recovered model tables",
+    "Corrupt, partial, wrong-hash and mismatched-source fixtures cannot publish a report",
+    "Existing output directory is never overwritten",
+    "No torch, transformers or vllm import during offline rescoring"
+  ]
+}

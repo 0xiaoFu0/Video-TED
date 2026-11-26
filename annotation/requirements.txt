@@ -1,0 +1,11 @@
+# Install into the dedicated conda environment through the requested pip mirror.
+# Core versions from the user's successful A800 pilot; not a full environment lockfile.
+torch==2.6.0
+torchvision==0.21.0
+transformers==5.8.0
+accelerate>=1.4,<2
+qwen-vl-utils==0.0.14
+decord==0.6.0
+numpy>=1.26,<3
+Pillow>=10,<13
+safetensors>=0.5

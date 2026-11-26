@@ -1,0 +1,24 @@
+{
+  "upstream_url": "https://github.com/iie-ycx/RLSD",
+  "upstream_commit": "aca313b978de4fb3a509ddf1831bf61fe597a2eb",
+  "bootstrap": "Independent clone of clean local RLSD-upstream checkout after network failure",
+  "orarl_reference_url": "https://github.com/HVision-NKU/OraRL",
+  "orarl_reference_commit": "e1ec91ff00f59ee0da04d285938c1f7247daa69c",
+  "orarl_scope": "annotation-as-rollout concept; not a full OraRL reproduction",
+  "video_star_url": "https://github.com/AMAP-ML/Video-STAR",
+  "raw_annotation_sha256": {
+    "sft.json": "bc74b8cb0197e4f7b2b0a10ba8ab9a26cf8658ca0a4e2f4ef942308e29e63c8f",
+    "sft_cot.json": "6b8a1bfb9f00b1cdb0e66c601dbba402225be3d7d7d942b865d58ff6046e57b9"
+  },
+  "local_infrastructure_source": "/Users/zwj/Desktop/My_Project/Open-o3-VISD-vLLM-direction-control",
+  "local_source_sha256": {
+    "verl/trainer/ray_trainer.py": "786f6bdf957786c6afb358febf7abc5ad26ea66bfd9a04063348f7591f9d4602",
+    "verl/utils/dataset.py": "2187a6626a3fde3d2b2b200f20843e71e48c5c49f3c56060d59337f4a10dbb5e",
+    "verl/workers/rollout/vllm_rollout_spmd.py": "d325b0df07a06c7f7433c1fd8ad032dcb9d5bfd7f3add701cf5f77bed7faf3ef"
+  },
+  "ported_change": "Forward raw_prompt to vLLM for training and validation video preprocessing",
+  "data_sha256": {
+    "train.sft.jsonl": "8efe3e15b36d7adc5333b92e3c2ae907f6f40a286796d7747b0bd43bbf57e3e9",
+    "train.rlsd.jsonl": "392a94cbef1fd113e0537604bb2408554c78ba22b910ff261c9b7c21f4604403"
+  }
+}

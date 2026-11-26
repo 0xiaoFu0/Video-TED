@@ -1,0 +1,111 @@
+{
+  "source_annotation": "https://huggingface.co/datasets/AILab-CVC/SEED-Bench/resolve/main/SEED-Bench.json",
+  "source_archive_part": "https://huggingface.co/datasets/AILab-CVC/SEED-Bench/resolve/main/v1_video.zip.032",
+  "annotation_sha256": "ebd4aab3f602e5e7826c29824a0e63fe803308bf628dce2787972c523664d567",
+  "central_directory_sha256": "7ae4da246ed02685b067bb618d85a253a656a862dbd96c444b628a8c4364175c",
+  "total_annotation_questions": 17990,
+  "video_questions": 3757,
+  "task_question_counts": {
+    "10": 1509,
+    "11": 1225,
+    "12": 1023
+  },
+  "archive_entries": 33820,
+  "archive_directories": 3764,
+  "archive_frame_files": 30056,
+  "frame_folders": 3757,
+  "duplicate_question_ids": [],
+  "duplicate_archive_paths": [],
+  "missing_expected_frame_paths": [],
+  "unexpected_frame_paths": [],
+  "invalid_frame_folders": {},
+  "mapping_by_question_type": {
+    "10": "v1_video/task10/ssv2_8_frame/{question_id}/{1..8}.png",
+    "11": "v1_video/task11/kitchen_8_frame/{question_id}/{1..8}.png",
+    "12": "v1_video/task12/breakfast_8_frame/{question_id}/{1..8}.png"
+  },
+  "examples": {
+    "10": {
+      "annotation": {
+        "answer": "C",
+        "choice_a": "pretending to scoop something up with something",
+        "choice_b": "pretending to put something into something",
+        "choice_c": "pretending to take something from somewhere",
+        "choice_d": "pretending to put something next to something",
+        "data_id": "45899.webm",
+        "data_type": "video",
+        "question": "Please recognize the action that occurs in this video.",
+        "question_id": "v1",
+        "question_type_id": 10
+      },
+      "frame_files": [
+        "v1_video/task10/ssv2_8_frame/v1/1.png",
+        "v1_video/task10/ssv2_8_frame/v1/2.png",
+        "v1_video/task10/ssv2_8_frame/v1/3.png",
+        "v1_video/task10/ssv2_8_frame/v1/4.png",
+        "v1_video/task10/ssv2_8_frame/v1/5.png",
+        "v1_video/task10/ssv2_8_frame/v1/6.png",
+        "v1_video/task10/ssv2_8_frame/v1/7.png",
+        "v1_video/task10/ssv2_8_frame/v1/8.png"
+      ]
+    },
+    "11": {
+      "annotation": {
+        "answer": "B",
+        "choice_a": "position down spatula",
+        "choice_b": "put down spatula",
+        "choice_c": "set aside spatula",
+        "choice_d": "place on the table spatula",
+        "data_id": "P28/P28_21.MP4",
+        "data_type": "video",
+        "question": "What do you expect to occur immediately after this video ends?",
+        "question_id": "v1743",
+        "question_type_id": 11,
+        "segment": [
+          58.77,
+          60.26
+        ]
+      },
+      "frame_files": [
+        "v1_video/task11/kitchen_8_frame/v1743/1.png",
+        "v1_video/task11/kitchen_8_frame/v1743/2.png",
+        "v1_video/task11/kitchen_8_frame/v1743/3.png",
+        "v1_video/task11/kitchen_8_frame/v1743/4.png",
+        "v1_video/task11/kitchen_8_frame/v1743/5.png",
+        "v1_video/task11/kitchen_8_frame/v1743/6.png",
+        "v1_video/task11/kitchen_8_frame/v1743/7.png",
+        "v1_video/task11/kitchen_8_frame/v1743/8.png"
+      ]
+    },
+    "12": {
+      "annotation": {
+        "answer": "D",
+        "choice_a": "open teabag, carry teabag, carry cup, hold kettle, pour water",
+        "choice_b": "open teabag, carry teabag, transfer cup, lift open kettle, pour water",
+        "choice_c": "open teabag, pull teabag, carry cup, carry kettle, pour water",
+        "choice_d": "open teabag, carry teabag, carry cup, carry kettle, pour water, carry kettle",
+        "data_id": "P04/webcam02/P04_tea.avi",
+        "data_type": "video",
+        "question": "Please determine the order of actions in this video and list them.",
+        "question_id": "v3817",
+        "question_type_id": 12,
+        "segment": [
+          141,
+          327
+        ]
+      },
+      "frame_files": [
+        "v1_video/task12/breakfast_8_frame/v3817/1.png",
+        "v1_video/task12/breakfast_8_frame/v3817/2.png",
+        "v1_video/task12/breakfast_8_frame/v3817/3.png",
+        "v1_video/task12/breakfast_8_frame/v3817/4.png",
+        "v1_video/task12/breakfast_8_frame/v3817/5.png",
+        "v1_video/task12/breakfast_8_frame/v3817/6.png",
+        "v1_video/task12/breakfast_8_frame/v3817/7.png",
+        "v1_video/task12/breakfast_8_frame/v3817/8.png"
+      ]
+    }
+  },
+  "verification_scope": "Official ZIP central directory path inventory matched exactly to current official JSON; no PNG payloads downloaded or decoded and no full CRC test performed.",
+  "downloaded_archive_metadata_bytes": 4531626
+}

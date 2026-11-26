@@ -1,0 +1,186 @@
+{
+  "release": "AR-action-training-32gpu-v3",
+  "date": "2026-10-13",
+  "local_project": "/Users/zwj/Desktop/CVPR/AR/AR-action-training-32gpu-v3/AR-RLSD",
+  "server_project": "/path/to/workspace/zwj/AR-action-training-32gpu-v3/AR-RLSD",
+  "source_release": {
+    "path": "/Users/zwj/Desktop/CVPR/AR/AR-action-training-32gpu-v2",
+    "manifest_sha256": "1bf4837c7d969007f047b7667cbfffc68e89607e129c39a693f91176ba6f7d4e",
+    "verified_unchanged_files": 223
+  },
+  "mesd_reference": {
+    "path": "/Users/zwj/Desktop/My_Project/MeSD",
+    "files_sha256": {
+      "configs/train_mesd.yaml": "7fc728b57a63d9567e510a20fdde0c5511a42923027d12cae2754b87090c1314",
+      "verl/workers/actor/dp_mesd_actor.py": "99f77a7006a8a6fd445e1838f95b752cc9f55b89cf84145879872635e14f85bb",
+      "verl/workers/fsdp_workers.py": "ca5a17cb3be4fb991e3668756437ae40de57f2a7f9f4f1b7b8db3f6926d61f9f",
+      "verl/trainer/mesd_algos.py": "6e1147356d5bc5a5e1074fcdc2864104cab18106bf5a6414993bf83b1e7d2ae7",
+      "verl/trainer/core_algos.py": "9c5b6866468cc1038122d7d42c6ced9c2ec335bf19d4c9fd2c40200443b0de41"
+    },
+    "modified": false
+  },
+  "aligned": {
+    "teacher_update_mode": "ema",
+    "teacher_update_rate": 0.01,
+    "teacher_update_interval": 1,
+    "teacher_update_timing": "after the complete optimizer update",
+    "teacher_disable_after_step": 1000,
+    "teacher_prompt_tokens": 18432,
+    "lambda": "0.5 * max(1 - (step - 1) / 1000, 0)",
+    "advantage_std": "sample/unbiased, epsilon=1e-4",
+    "ppo_clip": [
+      0.2,
+      0.2
+    ],
+    "ppo_dual_clip": false,
+    "policy_average": "response token mean then global sequence mean",
+    "teacher_checkpoint": "rank-local sharded state required for exact resume",
+    "prompt_handling": "left-trim ordinary text using fast-tokenizer character offsets, re-encode before mRoPE, keep complete visual/chat skeleton"
+  },
+  "retained_ar": {
+    "reward": "accuracy * protocol_valid",
+    "reference_coef": 0.1,
+    "reference_mode": "clipped",
+    "reference_eligibility_and_failure_weight": "unchanged from v2",
+    "reference_after_teacher_cutoff": true,
+    "single_tree_teacher_context": true,
+    "credit_comparison": "old student token probability",
+    "base_model": "Qwen2.5-VL-7B-Instruct",
+    "student_prompt_tokens": 16384,
+    "response_tokens": 768,
+    "prompt_batch": 32,
+    "rollouts_per_prompt": 4,
+    "nodes": 4,
+    "gpus_per_node": 8,
+    "native_video": true,
+    "extra_scoring_service": false,
+    "prior_sft_stage": false
+  },
+  "not_migrated": [
+    "MeSD multiview teacher/top-k fusion",
+    "MeSD verification-aware failure RKL route",
+    "MeSD base SFT model and batch16",
+    "MeSD checkpoint frequency and auto-resume defaults"
+  ],
+  "server_data": {
+    "root": "/path/to/workspace/zwj/AR-action-training-merged-v1",
+    "expected_rows": 93583,
+    "bundled": false,
+    "checked_locally": false,
+    "files_rewritten": false,
+    "drop_last": true,
+    "steps_per_epoch": 2924,
+    "visited_rows_per_epoch": 93568
+  },
+  "validation_status": "CPU test results in VALIDATION.json; no server or CUDA training executed",
+  "changed_files": {
+    "AR-RLSD/README.md": {
+      "before_sha256": "2a8bde5b0ad28f590cfe421eb1a120918d72c8b9d0e4aceecee4b3083dee5c64",
+      "after_sha256": "3902f1c5b0049cf11c4b9092a29f478ec4eca8de6aace0cf75887b12194593f5"
+    },
+    "AR-RLSD/README_AR.md": {
+      "before_sha256": "a2af6aa51d72bda3f1b905732018329226333bae44fd52da21bd0125a280d5c1",
+      "after_sha256": "0ef4628b0860f3baea209ace5efd57e4d569058b084a8d80a33707cc1e2c6bfd"
+    },
+    "AR-RLSD/examples/action_recognition/merged_32gpu.env": {
+      "before_sha256": "035652c115bbe3cb8ef05a52cd5f5a4d44619d32f3960028073e92eda126311e",
+      "after_sha256": "685962ebe56587b23a3ee8cc10afd2367af92c3ece5e71c8b850b9473d02efc8"
+    },
+    "AR-RLSD/examples/action_recognition/rlsd.yaml": {
+      "before_sha256": "87aa28b8c2d2802fa2ef87538928eb57adebdb3c8faeb337b640ddebb31fabbb",
+      "after_sha256": "ff493b65c1b970512395856a874ec77b244ee5fec95abe95862bb6663d8ceebc"
+    },
+    "AR-RLSD/examples/action_recognition/run_merged_32gpu.sh": {
+      "before_sha256": "b122206ff81043a441bbea74d3121e83a6a1a4e0034a9a9c0a21194bc1177e74",
+      "after_sha256": "308cd8ed9504cd3653138bdf87c4be08ec5bf2301047c856d2c550bdc373b714"
+    },
+    "AR-RLSD/examples/action_recognition/run_qwen25.sh": {
+      "before_sha256": "e7e6f8e271dab2064e48ab4750f5fcc1011506b878fe0c7378e4ca53a04af7f3",
+      "after_sha256": "0d66ac7a2cd863498e0d7f43cc610b59482dc4adc3e9be9baa36340138d5a2c6"
+    },
+    "AR-RLSD/tests/ar/test_actor_integration.py": {
+      "before_sha256": "a93e8f679e297220a34b7c0a7bc7ff648db97ce536df5867693341f6f7321fa6",
+      "after_sha256": "b99fea43cf56d016fdf982bd4a99228dfeef45d371f049d8b85d0b6b6da7f8a8"
+    },
+    "AR-RLSD/tests/ar/test_protocol_configuration.py": {
+      "before_sha256": "ff4d0042ab39ee2053d5a84b259c2c1addbf248ebafe995527b6dd9d093cd88f",
+      "after_sha256": "d222fec7b7effaf7b4bedef0aade7fca649002a84aa08f6f33d2e0683823555f"
+    },
+    "AR-RLSD/tests/ar/test_qwen25_launch.py": {
+      "before_sha256": "28ae7a411172ca3e1b27e69299810e7059369fe001af87f177c1debb27912062",
+      "after_sha256": "c799eadaf26ab1c072426bb4f4e5f4f8cb060392eea58db6613d9cb0c2f9a3b7"
+    },
+    "AR-RLSD/tests/ar/test_trainer_integration.py": {
+      "before_sha256": "e025b7e1d9e0a402e4841f75f81eb0d1fac683f8b8a4205a4933aeedb20323ab",
+      "after_sha256": "a6d4ff323fa228a798aed94f8ba416058ea5a11f97665b6b17e9d61e409a954a"
+    },
+    "AR-RLSD/tests/test_cluster_topology.py": {
+      "before_sha256": "29570f3d2942b85191b98960e54fcec46c3e43582d7a1982dc9bbbae36c32883",
+      "after_sha256": "b7138b821edf0102da508b00891d6cb09665019939ebb3aba67180c4b9e1a06b"
+    },
+    "AR-RLSD/tests/test_merged_32gpu.py": {
+      "before_sha256": "66fc97a5a40c6a109bae4dd04014f0760e162aff212d27eb59f34e3241f59dc6",
+      "after_sha256": "b6b6e07a5ee45ece18a99a8d16e2d22a6bb4ebaea4dd586d2a7836f84b912394"
+    },
+    "AR-RLSD/verl/ar/objectives.py": {
+      "before_sha256": "9d0e6070dbf82bf7f87a5ccf50f188b77a2f9bf6249c7a6c0d094b959f0630fe",
+      "after_sha256": "51989810892dcad555fbf032bf41fe6bfbab61a1bf8166c0c8bea631fbc2e32d"
+    },
+    "AR-RLSD/verl/ar/trainer.py": {
+      "before_sha256": "1133c28ccca7db984d41bd0230d2cc918f8e00d6c9d67162bfd1b331e0892705",
+      "after_sha256": "a36f485a2060062f73ec9e1b2bcfdbe916881e310ddf5f0fdc5ef86846c347c1"
+    },
+    "AR-RLSD/verl/ar/validation.py": {
+      "before_sha256": "eb98bd45c8eabb2c4d46226c26a730413add37056edd3d92af95d36c88723d38",
+      "after_sha256": "c40b3bbf74e0694a0f6d070f47ec0e79deff8d6e4baa4c431258461f55ce49bf"
+    },
+    "AR-RLSD/verl/trainer/config.py": {
+      "before_sha256": "69adae335b886c11b85afe9c95b9aef5733af8f1ca77534317f5cb9d78cd325e",
+      "after_sha256": "7a2e2b6de777c390996c92a26e48351cd6cf8d12fe6b77fadc5a6c2056c8edf2"
+    },
+    "AR-RLSD/verl/trainer/opsd_algos.py": {
+      "before_sha256": "1fc3016951aa30bab2ad463a5edb163c965364c32b19ad723a1db058b8465104",
+      "after_sha256": "ba6d23945f8505085b8547032134e9feaf89bd2477819a6cc3dfa041e040b7e7"
+    },
+    "AR-RLSD/verl/trainer/opsd_config.py": {
+      "before_sha256": "11362b451dbe00e8a1157cf0d72c61de6fe27724a0458540146582269bdf73b1",
+      "after_sha256": "379a08e5442fe889d2fc1c969acd00168687f2a8a6b020e871a70a85c12f82dc"
+    },
+    "AR-RLSD/verl/trainer/opsd_main.py": {
+      "before_sha256": "10072ca4351886ef4ddd8b5858448d241185e9a3bc0dc1fc5bf438b67e8b419d",
+      "after_sha256": "7232d96e9786a6978c7015c0180d3e192fa7302f1e433dfeb7b3e9dbe0972fe3"
+    },
+    "AR-RLSD/verl/trainer/opsd_trainer.py": {
+      "before_sha256": "cb12cb0d634bb7df94ff3b8e89bc3914569f2805d98376d2729883be996d4bb1",
+      "after_sha256": "36005965755067d74197fa7710735068f9ba4ae6d4cb1b9df83c455a992eff9e"
+    },
+    "AR-RLSD/verl/utils/dataset.py": {
+      "before_sha256": "266d14a6249be561b0df605b04c1d27af0b531a35cbd827f00726d9d13d233db",
+      "after_sha256": "aaa5c7a355b6537ab3c4adca11459f1a2d808c8b02d572fa78213d473e2ab501"
+    },
+    "AR-RLSD/verl/workers/actor/config.py": {
+      "before_sha256": "fcf262f988129bac5163d6f16c5342d23ffb81e25b51a10a49e7300497619e2f",
+      "after_sha256": "0b61652febad53a12ab7368f22be2af00b453688c2e4d19ae7ad9c9c371a3ac6"
+    },
+    "AR-RLSD/verl/workers/actor/dp_opsd_actor.py": {
+      "before_sha256": "0c47721cfd61d10a6fafc785a9466abd781bda4b29061256576b279df88cd4f1",
+      "after_sha256": "8f8d7c94d73d3b7dc9319d36ae24ec5b0ebf5673db23958d34ac255eb79c6d59"
+    },
+    "AR-RLSD/verl/workers/fsdp_workers.py": {
+      "before_sha256": "a3d238f81101d82c93c92800f1363118a643821bf0b9aa1859adbdeaaf2e05b8",
+      "after_sha256": "5c261d4afd7a9b946b034bfb1530790494f8ab06f1a54e5017561a13b4d72f04"
+    },
+    "README.md": {
+      "before_sha256": "434fe4f5b5a92d933c79570522672dd17b4da77226f04bc31e8b98b044551720",
+      "after_sha256": "2aba7a2211ab343e177316a3eaed4b1bf508407f1832906be361458f8702a8bd"
+    }
+  },
+  "added_files": {
+    "AR-RLSD/tests/ar/test_ema_checkpoint.py": "49a428b439482e6680d0896784e70982169676b05d9735d7a3619d24c6f970e7",
+    "AR-RLSD/tests/ar/test_mesd_alignment.py": "d2d354d947eefca2ed6174095573465f53bb959b83c3fd4efcc7c890e6a7d951",
+    "AR-RLSD/tests/ar/test_prompt_left.py": "c90aeb99ec286d25bb6c76bd6282e1a328c8929078e079170ce3cebb447603ab",
+    "AR-RLSD/tests/ar/test_teacher_schedule.py": "9fceb5f5777403a40acedcd0219d515a0e1e786da58222755a23fbec3c88d952",
+    "AR-RLSD/verl/ar/prompt_length.py": "073bc4f7f7f2b71c4223d5158716dfa0fc3bd522cb136c452bafd3e628e1e8ad",
+    "AR-RLSD/verl/ar/schedule.py": "7de5fcb927b9420715388098548540ecda72a60ba4536d5ea29280a9ff665425"
+  }
+}

@@ -1,0 +1,108 @@
+<|im_start|>system
+You are a helpful assistant.<|im_end|>
+<|im_start|>user
+<|vision_start|><|video_pad|><|vision_end|>Identify the action shown in the provided video.
+
+Choose exactly one label from the candidate action labels below:
+Poking a hole into some substance
+Spilling something behind something
+Poking something so that it spins around
+Putting something onto a slanted surface but it doesn't glide down
+Spilling something next to something
+Pretending to spread air onto something
+Trying to pour something into something, but missing so it spills next to it
+Poking a hole into something soft
+Pulling two ends of something so that it separates into two pieces
+Poking a stack of something without the stack collapsing
+Lifting a surface with something on it but not enough for it to slide down
+Pouring something into something until it overflows
+Twisting (wringing) something wet until water comes out
+Spilling something onto something
+Failing to put something into something because something does not fit
+Pouring something onto something
+Pulling something onto something
+Poking a stack of something so the stack collapses
+Pulling two ends of something so that it gets stretched
+Pretending or trying and failing to twist something
+Pouring something out of something
+Pretending to pour something out of something, but something is empty
+Lifting a surface with something on it until it starts sliding down
+Pretending or failing to wipe something off of something
+Pretending to scoop something up with something
+Tipping something with something in it over, so something in it falls out
+Something being deflected from something
+Pretending to put something underneath something
+Letting something roll up a slanted surface, so it rolls back down
+Pushing something onto something
+Putting something that can't roll onto a slanted surface, so it stays where it is
+Putting something onto something else that cannot support it so it falls down
+Putting something that can't roll onto a slanted surface, so it slides down
+Putting something on a flat surface without letting it roll
+Sprinkling something onto something
+Pretending to sprinkle air onto something
+Spreading something onto something
+Tipping something over
+Something colliding with something and both come to a halt
+Digging something out of something
+Pulling something from behind of something
+Something colliding with something and both are being deflected
+Moving something and something so they collide with each other
+Trying but failing to attach something to something because it doesn't stick
+Bending something until it breaks
+Pulling two ends of something but nothing happens
+Bending something so that it deforms
+Moving something and something so they pass each other
+Putting something on the edge of something so it is not supported and falls down
+Pretending to poke something
+Pushing something off of something
+Wiping something off of something
+Pulling something out of something
+Pushing something so it spins
+Putting something that cannot actually stand upright upright on the table, so it falls on its side
+Burying something in something
+Tilting something with something on it slightly so it doesn't fall down
+Putting something underneath something
+Moving part of something
+Letting something roll down a slanted surface
+Pretending to put something onto something
+Plugging something into something but pulling it right out as you remove your hand
+Poking something so that it falls over
+Moving something across a surface without it falling down
+Moving something across a surface until it falls down
+Laying something on the table on its side, not upright
+Pretending to put something behind something
+Showing something to the camera
+Pretending to squeeze something
+Twisting something
+Pretending to turn something upside down
+Putting something upright on the table
+Spinning something so it continues spinning
+Trying to bend something unbendable so nothing happens
+Throwing something in the air and letting it fall
+Dropping something behind something
+Letting something roll along a flat surface
+Piling something up
+Pretending to be tearing something that is not tearable
+Showing something next to something
+Attaching something to something
+Putting something in front of something
+Showing a photo of something to the camera
+Unfolding something
+Turning the camera upwards while filming something
+Moving something towards the camera
+Turning the camera downwards while filming something
+
+Base your decision on the visible video evidence. Consider motion,
+temporal order, interactions between people and objects, and changes
+in object position or state when relevant. Distinguish what actually
+happens from what is merely attempted or suggested by the scene.
+
+Provide a concise summary of the relevant visual evidence inside
+<think>...</think>. Then copy exactly one candidate label inside
+<answer>...</answer>.
+
+Output format:
+<think>Concise visual evidence summary.</think>
+<answer>exact candidate label</answer>
+<|im_end|>
+<|im_start|>assistant

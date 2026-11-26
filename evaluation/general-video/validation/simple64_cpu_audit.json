@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-17",
+  "validation_type": "CPU mock; three synthetic annotation sets and placeholder media, official SEED annotations and synthetic images; no GPU inference or model scores",
+  "runs": [
+    {
+      "profile": "simple_64",
+      "n_total": 8280,
+      "n_done": 8280,
+      "complete": true,
+      "config": {
+        "model_path": "cpu-mock-not-a-model",
+        "model_identity": {
+          "model_id": "cpu-mock-not-a-model"
+        },
+        "backend": "mock",
+        "think_mode": true,
+        "n": 1,
+        "eval_profile": "simple_64",
+        "prompt_style": "generic",
+        "video_sampling": "uniform_fps_floor",
+        "protocol_reference": {
+          "kind": "local_prompt_and_frame_budget_variant",
+          "parent_profile": "videor1_64",
+          "changes": "generic short reasoning prompt (THINK_MODE=1); frame cap 64",
+          "sampling_note": "Retains uniform_fps_floor, target 2 FPS, min 4 and official clip boundaries; short clips can use fewer than 64 frames.",
+          "generation_note": "Generation, pixel and context budgets match videor1_64; this is not the Video-R1 reference prompt protocol."
+        },
+        "temperature": 0.01,
+        "top_p": 0.001,
+        "repetition_penalty": 1.0,
+        "max_new_tokens": 1024,
+        "max_model_len": 16384,
+        "gpu_memory_utilization": 0.8,
+        "tensor_parallel_size": 1,
+        "seed": 42,
+        "dtype": "bfloat16",
+        "trust_remote_code": false,
+        "fps": 2.0,
+        "min_frames": 4,
+        "max_frames": 64,
+        "max_frames_by_benchmark": {
+          "mvbench": 64,
+          "videomme": 64,
+          "tempcompass": 64
+        },
+        "max_pixels": 200704,
+        "min_pixels": 100352,
+        "decoder": "decord",
+        "benchmarks": [
+          "mvbench",
+          "videomme",
+          "tempcompass"
+        ],
+        "limit": 0,
+        "python_version": "3.12.14",
+        "dependencies": {
+          "numpy": "2.5.4",
+          "Pillow": "12.3.0",
+          "pyarrow": "26.0.0",
+          "opencv-python-headless": "5.0.0.93"
+        },
+        "protocol": "video_frames_only_no_subtitles; generic; deterministic_option_parser; majority_vote",
+        "package_version": "1.2.2",
+        "source_sha256": "1b1c593f7f0f197555415406a2156372f4faffed650e0ad1d120c63236665f5e"
+      }
+    },
+    {
+      "profile": "seedbench_simple_8",
+      "n_total": 3757,
+      "n_done": 3757,
+      "complete": true,
+      "config": {
+        "model_path": "cpu-mock-not-a-model",
+        "model_identity": {
+          "model_id": "cpu-mock-not-a-model"
+        },
+        "backend": "mock",
+        "think_mode": true,
+        "n": 1,
+        "eval_profile": "seedbench_simple_8",
+        "prompt_style": "generic",
+        "video_sampling": "seedbench_official_8",
+        "protocol_reference": {
+          "kind": "local_prompt_variant",
+          "parent_profile": "seedbench_8",
+          "changes": "generic short reasoning prompt (THINK_MODE=1)",
+          "generation_note": "Generation, pixel and context budgets match seedbench_8; eight official frames remain unchanged.",
+          "seedbench_coverage_note": "SEED-Bench-1 video MCQ only; eight official frames per question, no source-video resampling."
+        },
+        "seedbench_input": {
+          "frames": 8,
+          "sampling": "seedbench_official_8",
+          "resample": false,
+          "timing_source": "synthetic_ordinal_2fps",
+          "source_timing_known": false,
+          "scoring": "generated_mcq_pooled_accuracy_not_candidate_likelihood",
+          "source": "https://huggingface.co/datasets/AILab-CVC/SEED-Bench"
+        },
+        "temperature": 0.01,
+        "top_p": 0.001,
+        "repetition_penalty": 1.0,
+        "max_new_tokens": 1024,
+        "max_model_len": 16384,
+        "gpu_memory_utilization": 0.8,
+        "tensor_parallel_size": 1,
+        "seed": 42,
+        "dtype": "bfloat16",
+        "trust_remote_code": false,
+        "fps": 2.0,
+        "min_frames": 4,
+        "max_frames": 8,
+        "max_frames_by_benchmark": {
+          "seedbench": 8
+        },
+        "max_pixels": 200704,
+        "min_pixels": 100352,
+        "decoder": "decord",
+        "benchmarks": [
+          "seedbench"
+        ],
+        "limit": 0,
+        "python_version": "3.12.14",
+        "dependencies": {
+          "numpy": "2.5.4",
+          "Pillow": "12.3.0",
+          "pyarrow": "26.0.0",
+          "opencv-python-headless": "5.0.0.93"
+        },
+        "protocol": "video_frames_only_no_subtitles; generic; deterministic_option_parser; majority_vote",
+        "package_version": "1.2.2",
+        "source_sha256": "1b1c593f7f0f197555415406a2156372f4faffed650e0ad1d120c63236665f5e"
+      }
+    }
+  ],
+  "resume_kept_all_predictions": true
+}

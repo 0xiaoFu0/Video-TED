@@ -1,0 +1,55 @@
+student_generation_prompt
+<|im_start|>system
+You are a helpful assistant.<|im_end|>
+<|im_start|>user
+<|vision_start|><|video_pad|><|vision_end|>What kind of human action is shown in the video?
+Organize the visible action evidence in a concise hierarchy inside <think>...</think>, using indentation: start with a broad activity, then group relevant observations under meaningful branches. Preserve supported coordination or temporal relationships and uncertainty; do not invent details. Use only branches supported by the video. End with <answer>action_class</answer>.<|im_end|>
+<|im_start|>assistant
+
+
+teacher_scoring_prompt
+<|im_start|>system
+You are a helpful assistant.<|im_end|>
+<|im_start|>user
+<|vision_start|><|video_pad|><|vision_end|>What kind of human action is shown in the video?
+Organize the visible action evidence in a concise hierarchy inside <think>...</think>, using indentation: start with a broad activity, then group relevant observations under meaningful branches. Preserve supported coordination or temporal relationships and uncertainty; do not invent details. Use only branches supported by the video. End with <answer>action_class</answer>.
+
+Training-only reference context:
+Reference class: brush_hair
+Class-level prior (attention guidance, not observed video facts):
+Hair grooming
+  Tool contact with hair and repeated brushing motion.
+
+Instance evidence tree (from generated annotations; not visually verified):
+<action_tree>
+Hair grooming
+  Hand–hair interaction
+    Arms: The arms are moving in a repetitive up-and-down motion, primarily near the head.
+    Hands: The hands are holding an object (a hairbrush) and are in contact with the hair.
+    Head: The head is slightly tilted forward, and the hair is being moved by the brushing action.
+</action_tree>
+
+Supplementary source observations:
+- Torso: The torso remains relatively still, with minimal movement.
+
+Preserve uncertainty. Use the video to resolve conflicts; do not turn class priors into observed events.
+
+Use this context to interpret the video. Preserve uncertainty and do not turn class priors into observed events. Give a concise indented action hierarchy inside <think>...</think>, followed by <answer>action_class</answer>. The <action_tree> tags in the reference context mark evidence only; your response must use <think>...</think>.<|im_end|>
+<|im_start|>assistant
+
+
+student_reference_teacher_forcing
+<|im_start|>system
+You are a helpful assistant.<|im_end|>
+<|im_start|>user
+<|vision_start|><|video_pad|><|vision_end|>What kind of human action is shown in the video?
+Organize the visible action evidence in a concise hierarchy inside <think>...</think>, using indentation: start with a broad activity, then group relevant observations under meaningful branches. Preserve supported coordination or temporal relationships and uncertainty; do not invent details. Use only branches supported by the video. End with <answer>action_class</answer>.<|im_end|>
+<|im_start|>assistant
+<think>
+Hair grooming
+  Hand–hair interaction
+    Arms: The arms are moving in a repetitive up-and-down motion, primarily near the head.
+    Hands: The hands are holding an object (a hairbrush) and are in contact with the hair.
+    Head: The head is slightly tilted forward, and the hair is being moved by the brushing action.
+</think>
+<answer>brush_hair</answer><|im_end|>

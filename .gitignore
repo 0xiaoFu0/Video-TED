@@ -1,0 +1,15 @@
+# Local environment and experiment artifacts
+.env
+*.env
+!.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.jsonl
+*.safetensors
+*.ckpt
+*.pt
+*.log
+outputs/
+checkpoints/

@@ -1,0 +1,444 @@
+{
+  "repository": "https://github.com/AMAP-ML/Video-STAR",
+  "commit": "8b5576ca3dcf690399a440816a6742b5eb6fb6ee",
+  "files": [
+    {
+      "upstream_path": "AScripts/ceval1oss/4subtol.py",
+      "package_path": "upstream/AScripts/ceval1oss/4subtol.py",
+      "git_blob": "50df3f0c53069f6654514f2f04ba2bd40ccf447e",
+      "sha256": "8c2cc7e2d63f9e88249317a5b163148ca8fa9ad0df78db96ba55af0a4af5e226"
+    },
+    {
+      "upstream_path": "AScripts/ceval1oss/multi.py",
+      "package_path": "upstream/AScripts/ceval1oss/multi.py",
+      "git_blob": "0b20b22c15b52c57d91dc2b1be775d2cc43a69e4",
+      "sha256": "19387b5a908d694e89175c0aae4344ced4e3d8657eee25b11d66a8d557e7db37"
+    },
+    {
+      "upstream_path": "AScripts/ceval1oss/run_hmdb51_1.sh",
+      "package_path": "upstream/AScripts/ceval1oss/run_hmdb51_1.sh",
+      "git_blob": "54b17fdad354578ec458f8ce8fd995c983373d58",
+      "sha256": "2a13bd681cc331c3b1f6c3f63da52876a271bb4659de9183d355c7e624c2e801"
+    },
+    {
+      "upstream_path": "AScripts/ceval1oss/run_hmdb51_2.sh",
+      "package_path": "upstream/AScripts/ceval1oss/run_hmdb51_2.sh",
+      "git_blob": "7791de2bd58e94d769670576b996de394483c6b1",
+      "sha256": "9db8fa31d8a2a5470a07818c815a064cf0cb654a0890208de83dd48a5ade0443"
+    },
+    {
+      "upstream_path": "AScripts/ceval1oss/run_k400_1.sh",
+      "package_path": "upstream/AScripts/ceval1oss/run_k400_1.sh",
+      "git_blob": "f52ab49fa95cdc4a834acbf86ba55f15fd495381",
+      "sha256": "390249d5e6fc93cb9da8d1ef8ecb385ab52e2b9d707575018e730c9e2ae3fbb3"
+    },
+    {
+      "upstream_path": "AScripts/ceval1oss/run_k400_2.sh",
+      "package_path": "upstream/AScripts/ceval1oss/run_k400_2.sh",
+      "git_blob": "5c7096cc4bd28191cfc4c7a1d543aa7918ee92de",
+      "sha256": "f324cc5a0dc40293e23ede37f29822069187012470d5cabdc7cc2d44e7b5ec17"
+    },
+    {
+      "upstream_path": "AScripts/ceval1oss/run_ssv2_1.sh",
+      "package_path": "upstream/AScripts/ceval1oss/run_ssv2_1.sh",
+      "git_blob": "af95a3ab4f559ba112d7a4bb0c73f5d0a6772cc3",
+      "sha256": "8b7ce8342147c986fb226e528f0194502dd2f24b86523ba498ac79bcbab5645e"
+    },
+    {
+      "upstream_path": "AScripts/ceval1oss/run_ssv2_2.sh",
+      "package_path": "upstream/AScripts/ceval1oss/run_ssv2_2.sh",
+      "git_blob": "d60ffe39faee1346906d8b0a952f66d52f984fa8",
+      "sha256": "a4f7b2e5e49c59c56f092ad7d3de2dd1074d684d392c3d6e1a8595a6bc75d8a5"
+    },
+    {
+      "upstream_path": "AScripts/ceval1oss/run_ucf_1.sh",
+      "package_path": "upstream/AScripts/ceval1oss/run_ucf_1.sh",
+      "git_blob": "05e63db8a6892b84ec255ab66278bc315d7167d5",
+      "sha256": "48a1f439ce63dda252aba5b7cbd10bbe89aedec38fd66f5c8760a8f9f458a8bb"
+    },
+    {
+      "upstream_path": "AScripts/ceval1oss/run_ucf_2.sh",
+      "package_path": "upstream/AScripts/ceval1oss/run_ucf_2.sh",
+      "git_blob": "48c7b3ab5a2c37312ee9b0761ad68d7e5a7ec4f3",
+      "sha256": "30fdeb2a6d4f93fee58a52130aea961fe20b3327b92ef4ecfcea1721f391e0bc"
+    },
+    {
+      "upstream_path": "AScripts/ceval2oss/4subtol.py",
+      "package_path": "upstream/AScripts/ceval2oss/4subtol.py",
+      "git_blob": "2e72c300a7a24b206795f1f4538a2818a2853fad",
+      "sha256": "8826638b775929fc8375b9d4569546547ac795e2bd30b6eb70e0042f13f95e0a"
+    },
+    {
+      "upstream_path": "AScripts/ceval2oss/split_Kinetics-600-val_1.sh",
+      "package_path": "upstream/AScripts/ceval2oss/split_Kinetics-600-val_1.sh",
+      "git_blob": "713aeaf5405a9783a85ef48de49a9cf7aa36b3c9",
+      "sha256": "73f10fb7ac74f7eb1b6a4329a29aade753f8524eb3acb9388716dafd3620f5c9"
+    },
+    {
+      "upstream_path": "AScripts/ceval2oss/split_Kinetics-600-val_2.sh",
+      "package_path": "upstream/AScripts/ceval2oss/split_Kinetics-600-val_2.sh",
+      "git_blob": "c9a7b83e3d9f6349bcd9ecc634bb7a7946ecc296",
+      "sha256": "16727fc5434d7e3958dada1f740d134b6341d2fe8549394f7f539f83dbc93854"
+    },
+    {
+      "upstream_path": "AScripts/ceval2oss/split_Kinetics-600-val_3.sh",
+      "package_path": "upstream/AScripts/ceval2oss/split_Kinetics-600-val_3.sh",
+      "git_blob": "5c8bed100647d2e299ff781d0c920d78b0bb52a5",
+      "sha256": "d988a02b48ce61cb931d09ced1138b6f209eb77592fa017a16a9fe692ecb0f63"
+    },
+    {
+      "upstream_path": "AScripts/ceval2oss/split_hmdb51_123.sh",
+      "package_path": "upstream/AScripts/ceval2oss/split_hmdb51_123.sh",
+      "git_blob": "7c1413c2d3339ed7f343407810b5e3268d5380f5",
+      "sha256": "ab01d35e7b0f4f14d3c5ac27a81951a587293bad448a5e06ca819b504180d6f1"
+    },
+    {
+      "upstream_path": "AScripts/ceval2oss/split_hmdb51_full.sh",
+      "package_path": "upstream/AScripts/ceval2oss/split_hmdb51_full.sh",
+      "git_blob": "5c9fe7eada012510b9af152648c3369df2f3cbe7",
+      "sha256": "4c45e04d04d37f71903a9372bb13b2814dd024d97f0246f4de6a22c555b9b968"
+    },
+    {
+      "upstream_path": "AScripts/ceval2oss/split_ucf101_123.sh",
+      "package_path": "upstream/AScripts/ceval2oss/split_ucf101_123.sh",
+      "git_blob": "06fa32355bdf31731625206e7f38a99fef208484",
+      "sha256": "c86c1f47475623fe6f7edb0afcb9d7bf4c0f3aa70ef64020e01b33b16c0b15bc"
+    },
+    {
+      "upstream_path": "AScripts/ceval2oss/split_ucf101_full.sh",
+      "package_path": "upstream/AScripts/ceval2oss/split_ucf101_full.sh",
+      "git_blob": "30a04a8a397a472ba474ba7cb0b906ee4c697312",
+      "sha256": "3565eaa603e1e9db1d24d818239f13594c9ced698ba54d3eb6084df4d18be342"
+    },
+    {
+      "upstream_path": "AScripts/ceval3oss/4subtol.py",
+      "package_path": "upstream/AScripts/ceval3oss/4subtol.py",
+      "git_blob": "2e72c300a7a24b206795f1f4538a2818a2853fad",
+      "sha256": "8826638b775929fc8375b9d4569546547ac795e2bd30b6eb70e0042f13f95e0a"
+    },
+    {
+      "upstream_path": "AScripts/ceval3oss/split_Kinetics-600-val_1.sh",
+      "package_path": "upstream/AScripts/ceval3oss/split_Kinetics-600-val_1.sh",
+      "git_blob": "631d5c4273f94b79b376635322d7fed1d00cdf3a",
+      "sha256": "52df290d86becab87952970a78c042387d6a14fb9c1987179b973eb568fc02a3"
+    },
+    {
+      "upstream_path": "AScripts/ceval3oss/split_Kinetics-600-val_2.sh",
+      "package_path": "upstream/AScripts/ceval3oss/split_Kinetics-600-val_2.sh",
+      "git_blob": "bb5e89f4cf6290f4312b01f3becd9d0b328ee84e",
+      "sha256": "1f66c3757e6d3bedce3a9501012a3d875709f00f4acca344ad7cd5152d303b1d"
+    },
+    {
+      "upstream_path": "AScripts/ceval3oss/split_Kinetics-600-val_3.sh",
+      "package_path": "upstream/AScripts/ceval3oss/split_Kinetics-600-val_3.sh",
+      "git_blob": "4093a9e3cf49f9d76a2d0cbe76a7471ccf7fd82c",
+      "sha256": "30674399900f120d9698c2cea8fe3bf170f41db2321ed21bf973ffcd844ff789"
+    },
+    {
+      "upstream_path": "AScripts/ceval3oss/split_hmdb51_1.sh",
+      "package_path": "upstream/AScripts/ceval3oss/split_hmdb51_1.sh",
+      "git_blob": "4f95ca290e62e65f92c0c083234a837123c89f8d",
+      "sha256": "4eaad30d75fd55b330e8ab250f946bd5afbf508518e60787a41128a44e981649"
+    },
+    {
+      "upstream_path": "AScripts/ceval3oss/split_hmdb51_2.sh",
+      "package_path": "upstream/AScripts/ceval3oss/split_hmdb51_2.sh",
+      "git_blob": "c943843f227a627b37584dd578061c123e9e7e9d",
+      "sha256": "21bef596972a5906bb6783ac887faf748476905a2e47cce8109db9ab14530076"
+    },
+    {
+      "upstream_path": "AScripts/ceval3oss/split_hmdb51_3.sh",
+      "package_path": "upstream/AScripts/ceval3oss/split_hmdb51_3.sh",
+      "git_blob": "284b89edc500b2a6eb3ef30b73051a61a1fe6449",
+      "sha256": "fd2ab65130dcf5cdfd05ae48af3d08159c05248d4041e8f267953c468ef432cc"
+    },
+    {
+      "upstream_path": "AScripts/ceval3oss/split_ucf101_1.sh",
+      "package_path": "upstream/AScripts/ceval3oss/split_ucf101_1.sh",
+      "git_blob": "7213fc0eecbbfc7968cd12ab8b2acdc4ca99920e",
+      "sha256": "a84897a662a505e9b9f1d8d6ac649efb4edad3faecd5b1acdc6ccbb1a51f4b0b"
+    },
+    {
+      "upstream_path": "AScripts/ceval3oss/split_ucf101_2.sh",
+      "package_path": "upstream/AScripts/ceval3oss/split_ucf101_2.sh",
+      "git_blob": "ec147d399e5a06ebd565f0177bcbb6345c299893",
+      "sha256": "c9187c5e117ed52827c164901f9ec0486379007e91656fe7a2311c867c0e1e12"
+    },
+    {
+      "upstream_path": "AScripts/ceval3oss/split_ucf101_3.sh",
+      "package_path": "upstream/AScripts/ceval3oss/split_ucf101_3.sh",
+      "git_blob": "8f435286ca762e33800b49e52cfe49bc757a5685",
+      "sha256": "9df5324f5711c5622a7ea82405dcc4d0ee11b39ff75be54f1141067a69c8f9fd"
+    },
+    {
+      "upstream_path": "AScripts/cresult/1.py",
+      "package_path": "upstream/AScripts/cresult/1.py",
+      "git_blob": "d1c162c6171471ef3d019aab13e699cf27f46bc5",
+      "sha256": "338382c4c9488febed8c97d61084459a4388f029739ca55a67dc2a4f9ed5d080"
+    },
+    {
+      "upstream_path": "AScripts/cresult/11.py",
+      "package_path": "upstream/AScripts/cresult/11.py",
+      "git_blob": "1a36d51c3b3fa15d705658ac14da1a844d9cf350",
+      "sha256": "16495763498500e2e702ebee5654b686b8be12a3f62ca95a1d6d79d4f27fe8ec"
+    },
+    {
+      "upstream_path": "AScripts/cresult/2.py",
+      "package_path": "upstream/AScripts/cresult/2.py",
+      "git_blob": "af9be6f896733a9ddc2bd9572545e0535caf91be",
+      "sha256": "b5da1a467208294937e884d67a62bf019bad985aef2f731d3e4d7e314703b1d4"
+    },
+    {
+      "upstream_path": "AScripts/cresult/22.py",
+      "package_path": "upstream/AScripts/cresult/22.py",
+      "git_blob": "d6df854d8bd60fffc554eb546bae4a79a1740433",
+      "sha256": "cac1d2207368557add3ff07894952886067393cef9bfe4466abfdf1054cd60f4"
+    },
+    {
+      "upstream_path": "AScripts/cresult/compare.py",
+      "package_path": "upstream/AScripts/cresult/compare.py",
+      "git_blob": "abf577d266290dfdc080f9854473b85454bc666a",
+      "sha256": "6a10f0be4bed1a62dea411920f725a294446ba3ce2600df8cd828036d4170a7c"
+    },
+    {
+      "upstream_path": "README.md",
+      "package_path": "upstream/README.md",
+      "git_blob": "b1ccaa86707f0bef33a744c94ef7f2b9975c1dc6",
+      "sha256": "be8e1c0b081608a84dfdfcda075e142225125375297f4110e58a63a458603f1e"
+    },
+    {
+      "upstream_path": "requirements.txt",
+      "package_path": "upstream/requirements.txt",
+      "git_blob": "595facf7e814a78269344f9b85635c3a2be91e20",
+      "sha256": "b9f9a5eb0d0ec67f82629b4e876a3a477a49aec8afda239ddb7c6957f858a19d"
+    },
+    {
+      "upstream_path": "src/qwen-vl-utils/src/qwen_vl_utils/__init__.py",
+      "package_path": "upstream/src/qwen-vl-utils/src/qwen_vl_utils/__init__.py",
+      "git_blob": "daa8708442e93d5ec3a02e863ad7ae833952d199",
+      "sha256": "a0c454a56f2ba478731013afe1ba5d5d9caff652fe0ce51be1c315476e5c7905"
+    },
+    {
+      "upstream_path": "src/qwen-vl-utils/src/qwen_vl_utils/vision_process.py",
+      "package_path": "upstream/src/qwen-vl-utils/src/qwen_vl_utils/vision_process.py",
+      "git_blob": "efbf51137dcc2884e80da05ad4ab24b9435bcef5",
+      "sha256": "1e4fe1e0cfef703ed56c5f181088aad6560580c9f5717fc8c729203227f5b254"
+    },
+    {
+      "upstream_path": "src/r1-v/LICENSE",
+      "package_path": "upstream/src/r1-v/LICENSE",
+      "git_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "upstream_path": "AFile/json/SSv2/test.json",
+      "package_path": "AFile/json/SSv2/test.json",
+      "git_blob": "10cf8578ef3c53643dec2e735d17203f0ef358df",
+      "sha256": "f5545889345245e62ccff92d5e4c60adf8cc868a5bfbf5e006e6259cfbd769db"
+    },
+    {
+      "upstream_path": "AFile/json/SSv2/test_rephrased.json",
+      "package_path": "AFile/json/SSv2/test_rephrased.json",
+      "git_blob": "21ba68186cf2928422cd7707a765276048474099",
+      "sha256": "4989f264d44da91462c365c10514d268e9176161b0ac40f8c1b10598716ce3e8"
+    },
+    {
+      "upstream_path": "AFile/json/SSv2/train_rephrased.json",
+      "package_path": "AFile/json/SSv2/train_rephrased.json",
+      "git_blob": "43aaab367d7159f125b85198b523a0208a8eb369",
+      "sha256": "b7e9c59d6dd8b03a457ed1c7dd104cf16017f090c90a180d197934d9048ec764"
+    },
+    {
+      "upstream_path": "AFile/json/SSv2/val.json",
+      "package_path": "AFile/json/SSv2/val.json",
+      "git_blob": "308bb1662a9af9bc9bbe255b464ee1bc8e243e37",
+      "sha256": "1773cd7ff65dd2ef4d9da7e715118907aa4cbbd1ecafbe09bc3e82ecc697d70e"
+    },
+    {
+      "upstream_path": "AFile/json/hmdb51/test.json",
+      "package_path": "AFile/json/hmdb51/test.json",
+      "git_blob": "53c53e1c7be23399f0575610b90440e78455a20d",
+      "sha256": "13676cac97aaa5866c0a22202258dc9109ef0e2149fb3703667a7443fbf860bc"
+    },
+    {
+      "upstream_path": "AFile/json/hmdb51/test_rephrased.json",
+      "package_path": "AFile/json/hmdb51/test_rephrased.json",
+      "git_blob": "e05d639822c9163f9ac2b41ee034a4c0c5c90006",
+      "sha256": "10a940f8b79dd2f7ea34be6bc059cfb008812e7d3dbb16b2ac9314444c3a6c24"
+    },
+    {
+      "upstream_path": "AFile/json/hmdb51/train_rephrased.json",
+      "package_path": "AFile/json/hmdb51/train_rephrased.json",
+      "git_blob": "faf33f077caf878080e4fbd6115a63dba16af507",
+      "sha256": "a9c5e5fc283de88a92efffda762c90b26383d6fb8adc707c487f1a11e66fb672"
+    },
+    {
+      "upstream_path": "AFile/json/hmdb51/val.json",
+      "package_path": "AFile/json/hmdb51/val.json",
+      "git_blob": "9a4c442e4ab960a533fe922546cda2628dd4d443",
+      "sha256": "98380e816eb6b901157b64e7171b572716aaa1580fe4d0c445fe6100863324a1"
+    },
+    {
+      "upstream_path": "AFile/json/kinetics400/test.json",
+      "package_path": "AFile/json/kinetics400/test.json",
+      "git_blob": "2e7446f0629d16227f9a35e1b34a4d3c629790df",
+      "sha256": "ca1e1e33d96a5b59e4a5b21fac511ab6da0adc5041b47079740965733937add9"
+    },
+    {
+      "upstream_path": "AFile/json/kinetics400/test_rephrased.json",
+      "package_path": "AFile/json/kinetics400/test_rephrased.json",
+      "git_blob": "e7c41ea54673835b64e03e5ca0f9572d23474bcb",
+      "sha256": "47d89ac2bd66b6e52c9b5e62ddc8b1585d163c0a3829f0ae45e9e9ed4f759c73"
+    },
+    {
+      "upstream_path": "AFile/json/kinetics400/train_rephrased.json",
+      "package_path": "AFile/json/kinetics400/train_rephrased.json",
+      "git_blob": "ce82936b2248f7c9d14286677e552ae6cd994a35",
+      "sha256": "42c94cbdf7fa3a2fada11cf3c87e946f5305b5f5d1981a5d8b0a5438a60c6427"
+    },
+    {
+      "upstream_path": "AFile/json/kinetics400/val.json",
+      "package_path": "AFile/json/kinetics400/val.json",
+      "git_blob": "b5dc82b89aee75f3c00c9815d427c0a6a367b6a8",
+      "sha256": "57a2199625ea322b37a1c556129c0a2781e947dda8d07bcf68f8d6eb78cb001b"
+    },
+    {
+      "upstream_path": "AFile/json/ucf101/test.json",
+      "package_path": "AFile/json/ucf101/test.json",
+      "git_blob": "a0ef3cc4f80ea84837bc6582966ed727bf7b0416",
+      "sha256": "79e0263f8a9a365f907ababc51e30df7a1e0133aaf58a1f2cd05ba832ae1f505"
+    },
+    {
+      "upstream_path": "AFile/json/ucf101/test_rephrased.json",
+      "package_path": "AFile/json/ucf101/test_rephrased.json",
+      "git_blob": "857e7dc187b9d72b9adb40ba958d3b8e949e13d9",
+      "sha256": "c2c31aba9fc30955328e967a14df9987fbf00f03a38f176ff236464c50eb0f9c"
+    },
+    {
+      "upstream_path": "AFile/json/ucf101/train_rephrased.json",
+      "package_path": "AFile/json/ucf101/train_rephrased.json",
+      "git_blob": "c28fe580077d0bac2afe0f7ef7a7aea7a56794b0",
+      "sha256": "39e0906a534ec22213feb1ad93af71af389d5dbbeb3c2e2a31c2479a944fc8c5"
+    },
+    {
+      "upstream_path": "AFile/json/ucf101/val.json",
+      "package_path": "AFile/json/ucf101/val.json",
+      "git_blob": "658036c9ce2c182ec97d14136ea300452c5d1980",
+      "sha256": "ddfa014c94fdd5fb51d9ba7d9d8523397bd1b41f1e96abd30d091c9f985a4f9c"
+    },
+    {
+      "upstream_path": "AFile/json_split/Kinetics-600-val/k600_split1_classes.json",
+      "package_path": "AFile/json_split/Kinetics-600-val/k600_split1_classes.json",
+      "git_blob": "d2150796f24edfd4451523391f6a5075a2dc23ed",
+      "sha256": "8505d949cffb8f5f6ddd2fb57cd1da970e9ba4001a354916641a92fe033ff593"
+    },
+    {
+      "upstream_path": "AFile/json_split/Kinetics-600-val/k600_split1_rephrased_classes.json",
+      "package_path": "AFile/json_split/Kinetics-600-val/k600_split1_rephrased_classes.json",
+      "git_blob": "d705d601ba126adce3232550eeef1b64922be1d5",
+      "sha256": "ed020e0ea4797f1117cefc8e4e823fc60f126e08ccaef7e6670e4ac2b6ac77a6"
+    },
+    {
+      "upstream_path": "AFile/json_split/Kinetics-600-val/k600_split2_classes.json",
+      "package_path": "AFile/json_split/Kinetics-600-val/k600_split2_classes.json",
+      "git_blob": "51797ed858399b7c5833b5027233d3270cb55ad7",
+      "sha256": "1ea90149ff356a02e55279bd28d0c646bfc9c5959dc4b04d1e7be3dbc44f1f36"
+    },
+    {
+      "upstream_path": "AFile/json_split/Kinetics-600-val/k600_split2_rephrased_classes.json",
+      "package_path": "AFile/json_split/Kinetics-600-val/k600_split2_rephrased_classes.json",
+      "git_blob": "2d9b9acaee747a6dc7837ac55a727fc4a6e78f56",
+      "sha256": "4cc186badb1895a3deb5d76e79500ebb4dd3a0646abdfae936d21f906202af61"
+    },
+    {
+      "upstream_path": "AFile/json_split/Kinetics-600-val/k600_split3_classes.json",
+      "package_path": "AFile/json_split/Kinetics-600-val/k600_split3_classes.json",
+      "git_blob": "3cd83b8078a3bfd06a3f3b0cc5bc5c8466164a5c",
+      "sha256": "22a1ff68551660ededa819be25813d7a296948506cd6f1ab6101e55ff1f13231"
+    },
+    {
+      "upstream_path": "AFile/json_split/Kinetics-600-val/k600_split3_rephrased_classes.json",
+      "package_path": "AFile/json_split/Kinetics-600-val/k600_split3_rephrased_classes.json",
+      "git_blob": "445af73505b968599537203296eda74ed194e966",
+      "sha256": "32e6dd85cfbb6232d6f332ea6bce2e07b6782915d7fd551267be5bb227ae700f"
+    },
+    {
+      "upstream_path": "AFile/json_split/Kinetics-600-val/k600_split_1.json",
+      "package_path": "AFile/json_split/Kinetics-600-val/k600_split_1.json",
+      "git_blob": "89f38dbf747f472e105631899e8b00cf59be7949",
+      "sha256": "bae4eccbf5963b994d6af3e03e4df5576db2896b819d5cac1b9da1ed920cce8e"
+    },
+    {
+      "upstream_path": "AFile/json_split/Kinetics-600-val/k600_split_2.json",
+      "package_path": "AFile/json_split/Kinetics-600-val/k600_split_2.json",
+      "git_blob": "023ac03f7b265416aba8c23250df9945576c10ea",
+      "sha256": "8b8997636f949f6093dc3d01789e0a359598f5675f9f780f61ca78ac0c58c056"
+    },
+    {
+      "upstream_path": "AFile/json_split/Kinetics-600-val/k600_split_3.json",
+      "package_path": "AFile/json_split/Kinetics-600-val/k600_split_3.json",
+      "git_blob": "0d6ac07d937a96dbcb2a8d6e925d675a5e20ba86",
+      "sha256": "bdef59731c256e37f66646d04c941dbf9f794fee0d920f07483b91410f695c66"
+    },
+    {
+      "upstream_path": "AFile/json_split/hmdb51/hmdb_exp_split_1.json",
+      "package_path": "AFile/json_split/hmdb51/hmdb_exp_split_1.json",
+      "git_blob": "49cbdb2d1ff4abcec870091ddae4173427637c5b",
+      "sha256": "c2eb260e515c3d2ed7738736ae0b1988343de934788894bb797edd303ae1034f"
+    },
+    {
+      "upstream_path": "AFile/json_split/hmdb51/hmdb_exp_split_2.json",
+      "package_path": "AFile/json_split/hmdb51/hmdb_exp_split_2.json",
+      "git_blob": "52698c8de648c283ce7a607236c7d9b4bcc095ae",
+      "sha256": "b2f6883adffe06cf0067e0bf93307b834d193efde814a72b7c69965b0d15ae18"
+    },
+    {
+      "upstream_path": "AFile/json_split/hmdb51/hmdb_exp_split_3.json",
+      "package_path": "AFile/json_split/hmdb51/hmdb_exp_split_3.json",
+      "git_blob": "06f90d3f82b6d63858f8abe0776051223dac441a",
+      "sha256": "ad2740b1833bb967d271695810819b352619cbce6185d5a15c66182ad3bbe32e"
+    },
+    {
+      "upstream_path": "AFile/json_split/hmdb51/hmdb_exp_split_full.json",
+      "package_path": "AFile/json_split/hmdb51/hmdb_exp_split_full.json",
+      "git_blob": "3c562848f33bcd65f7185b408c146350bb57c4e7",
+      "sha256": "2bab5205c498bc956100b8876cef66346ebd39c44ef8853913d6151e8a92587b"
+    },
+    {
+      "upstream_path": "AFile/json_split/hmdb51/hmdb_rephrased_classes.json",
+      "package_path": "AFile/json_split/hmdb51/hmdb_rephrased_classes.json",
+      "git_blob": "41a32617585578ae6ce9764c124b854354cc4b53",
+      "sha256": "e11a5f454fbbd74621bc82878e94a22519c312a687da46ea14123b7e151b8bc3"
+    },
+    {
+      "upstream_path": "AFile/json_split/ucf101/ucf101_rephrased_classes.json",
+      "package_path": "AFile/json_split/ucf101/ucf101_rephrased_classes.json",
+      "git_blob": "0f6ae071a7f78d48cbdce285995d361867f18954",
+      "sha256": "a0fa79cdf10c1068c9b6ac2fe75109377d80a442ab59c640d3f95dd419368f3e"
+    },
+    {
+      "upstream_path": "AFile/json_split/ucf101/ucf_split_1.json",
+      "package_path": "AFile/json_split/ucf101/ucf_split_1.json",
+      "git_blob": "63b179a7e44d2f2acde5b3bfbef448a8fd75f61b",
+      "sha256": "780a01664f468b4c91924c36a7837ac186dbf634347093fcef8370e53dbb6d8b"
+    },
+    {
+      "upstream_path": "AFile/json_split/ucf101/ucf_split_2.json",
+      "package_path": "AFile/json_split/ucf101/ucf_split_2.json",
+      "git_blob": "dc71d16255880d41df0f14d9b6a5da1e36bd1600",
+      "sha256": "fed3f3dfab3bfa9bb8848a5e06c608fa684d387c611dfbf1f12cac0665ad8dd8"
+    },
+    {
+      "upstream_path": "AFile/json_split/ucf101/ucf_split_3.json",
+      "package_path": "AFile/json_split/ucf101/ucf_split_3.json",
+      "git_blob": "f0c8a8845ac5a596ae55c3b84e39ea89b5355522",
+      "sha256": "9596673aec5794726f7fe4b71e44f1ee702a768ec68e65368c4b55ca02001384"
+    },
+    {
+      "upstream_path": "AFile/json_split/ucf101/ucf_split_full.json",
+      "package_path": "AFile/json_split/ucf101/ucf_split_full.json",
+      "git_blob": "745d322f654d8b9d4c4f39e220c15268a4d4c4bd",
+      "sha256": "47d55a87556ca3d76e8ed38349c059e471e0f89e08f66c9f03b06f20e95b932e"
+    }
+  ]
+}

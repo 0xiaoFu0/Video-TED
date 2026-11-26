@@ -1,0 +1,26 @@
+{
+  "flash_jsonl": "/path/to/workspace/lihao/codec_long_video/datasets/training_datasets_all/VideoChat-flash/short_vqa_train.jsonl",
+  "ssv2_root": "/gemini-3/space/zwj/LMUData/SSv2/20bn-something-something-v2",
+  "k710_root": "/path/to/workspace/datasets/Kinetics-700",
+  "eval_exclusions": "assets/eval_exclusions.json",
+  "base_rlsd": "/path/to/workspace/zwj/AR-RLSD-think/data/train.rlsd.think.jsonl",
+  "hmdb51_source": "/path/to/workspace/zwj/AR-RLSD-think/data/train.rlsd.think.jsonl",
+  "hmdb51_root": "/gemini-3/space/zwj/LMUData/HMDB51/videos",
+  "hmdb51_expected_classes": 51,
+  "hmdb51_eval_membership": "assets/hmdb51_eval_membership.json",
+  "student_model": "/path/to/workspace/models/Qwen/Qwen2.5-VL-7B-Instruct",
+  "annotation": {
+    "model": "/path/to/workspace/models/Qwen/Qwen3.8-27B",
+    "fps": 2.0,
+    "max_frames": 16,
+    "pixels": 100352,
+    "max_new_tokens": 1536,
+    "max_context": 16384,
+    "decode_timeout": 120,
+    "attempts": 3,
+    "rollouts": 4,
+    "min_accepted_rollouts": 1,
+    "seed": 0,
+    "prompt_profile": "tree_v1"
+  }
+}

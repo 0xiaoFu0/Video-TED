@@ -1,0 +1,5 @@
+For fine-grained object interactions, preserve supported distinctions such as touching
+versus near-contact, pretending versus doing, placement versus removal, and motion
+direction. For a collision, describe contact and subsequent motion of each object
+only if visible. For camera motion, use scene relationships to distinguish tilt or
+rotation from moving closer or farther. A wider view alone does not prove translation.

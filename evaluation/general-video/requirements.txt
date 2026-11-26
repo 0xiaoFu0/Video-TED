@@ -1,0 +1,6 @@
+# Extra dependencies for an existing MeSD/vLLM environment.
+# No training packages and no installation of this directory are required.
+numpy>=1.24,<3
+Pillow>=10
+pyarrow>=14
+decord==0.6.0

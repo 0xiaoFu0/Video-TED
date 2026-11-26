@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-04",
+  "release": "v4_think_hierarchy",
+  "source_format": "action_tree",
+  "assistant_format": "think",
+  "cpu_tests": {
+    "passed": 46,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 6.055,
+    "command": "python -m pytest tests/ar -q"
+  },
+  "data_manifest": "data/think_format_manifest.json",
+  "rows": 4676,
+  "classes": 51,
+  "unchanged_source_and_algorithm_sha256": {
+    "data/train.rlsd.jsonl": "392a94cbef1fd113e0537604bb2408554c78ba22b910ff261c9b7c21f4604403",
+    "data/train.sft.jsonl": "8efe3e15b36d7adc5333b92e3c2ae907f6f40a286796d7747b0bd43bbf57e3e9",
+    "verl/ar/objectives.py": "e8a9f5c93430c3271f17084e2a72daf0d561c07981234a52bf6da6361b28b325",
+    "verl/ar/trainer.py": "8fbb92ddbf0837e4bb1762403ea9f4665f5dff278802c18a481e23ec6533de5f",
+    "verl/ar/reward.py": "1d220f0f02069acc78e8b4d569a1e916ef73444f6b1975ab7bce71c193c1fb45",
+    "verl/workers/actor/dp_opsd_actor.py": "0f3b575681c63883e5f11fba6a36f20ad2f162623e7fd2eb49b0c74c174eee26"
+  },
+  "config_value_changes": [
+    "data.train_files",
+    "trainer.experiment_name"
+  ],
+  "hierarchy_body_and_indentation_preserved_for_all_rows": true,
+  "videos_labels_teacher_context_status_metadata_and_order_preserved": true,
+  "old_datasets_preserved": true,
+  "training_objectives_preserved": true,
+  "prompt_template_checks": {
+    "renders": 3,
+    "cached_qwen_chat_template_sha256": "ad60d90252ed0b0705ba14e2d0ad0fec0beac1ea955642b54059b36052d8bc96",
+    "examples": "docs/ar/think_prompt_examples.txt"
+  },
+  "python_and_shell_syntax": "passed",
+  "real_gpu_training": false,
+  "remote_video_decode_checked": false,
+  "real_tokenizer_reference_lengths_checked": false,
+  "server_next_step": "Run 2 training steps with the new data and base model; inspect generated think hierarchy and answer outputs."
+}

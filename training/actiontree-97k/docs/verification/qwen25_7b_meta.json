@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "python": "3.9.6",
+  "torch": "2.8.0",
+  "transformers": "4.57.3",
+  "model_class": "Qwen2_5_VLForConditionalGeneration",
+  "input_embedding_shape": [
+    152064,
+    3584
+  ],
+  "output_embedding_shape": [
+    152064,
+    3584
+  ],
+  "tie_word_embeddings": false,
+  "weights_remain_untied_after_tie_weights": true,
+  "all_model_parameters_meta": true,
+  "vision_out_hidden_size": 3584,
+  "video_tokens_per_second": 2,
+  "parameter_numel": 8292166656,
+  "weight_loading": false,
+  "gpu_execution": false
+}
