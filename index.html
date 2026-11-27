@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="VideoTED and ActionTree-97k for open-vocabulary action recognition.">
+<title>VideoTED · Tree-Guided Evidence Distillation</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="assets/brand/tree.png">
+<script src="assets/project-data.js" defer></script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="top">
+  <div class="shell top-inner">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><img src="assets/brand/tree.png" alt=""></span>VideoTED</a>
+    <nav aria-label="Project sections"><a href="#overview">Overview</a><a href="#dataset">Data</a><a href="#method">Method</a><a href="#results">Results</a><a href="#cases">Cases</a></nav>
+  </div>
+</header>
+<main id="content">
+<section class="hero" id="top">
+  <div class="shell hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow"><span></span> Open-vocabulary action recognition</p>
+      <h1 class="hero-title">
+        <img class="wordmark" src="assets/brand/wordmark-transparent.png" width="1620" height="971" alt="VideoTED">
+        <span class="subtitle">Tree-Guided Evidence Distillation for Open-Vocabulary Action Recognition</span>
+      </h1>
+      <p class="hero-description">VideoTED learns to connect visible observations to sub-actions and their temporal relations, so it can recognize activities beyond the categories seen in training.</p>
+      <div class="actions" aria-label="Project resources">
+        <span class="button pending paper-button">
+          <span class="resource-icon paper-icon" aria-hidden="true">📄</span><span>Paper<small>Coming soon</small></span></span>
+        <a class="button subtle" href="https://github.com/0xiaoFu0/Video-TED">
+          <svg class="resource-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 0a8 8 0 0 0-2.53 15.59c.4.08.55-.17.55-.38v-1.49c-2.23.48-2.7-.95-2.7-.95-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.81.06 1.24.83 1.24.83.71 1.22 1.87.87 2.33.67.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.87c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.19c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg><span>Code</span>
+        </a>
+        <span class="button pending"><span class="resource-icon" aria-hidden="true">🤗</span><span>Models &amp; Data<small>Coming soon</small></span></span>
+        <a class="button subtle" href="#results">Results</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="metrics">
+  <div class="shell metric-grid">
+    <div><strong>97,430</strong><span>Verified training examples</span></div>
+    <div><strong>+10.7 <small>pp</small></strong><span>Base–novel HM on HMDB51</span></div>
+    <div><strong>+4.5 <small>pp</small></strong><span>Overall video understanding</span></div>
+    <div><strong>+7.8 <small>pp</small></strong><span>Action-related video understanding</span></div>
+  </div>
+</div>
+<section class="section shell" id="overview">
+  <div class="section-lead"><p class="eyebrow"><span></span> Overview</p><h2>Recognizing unseen actions through hierarchical visual evidence</h2><p>Recognizing an unseen activity depends on identifying its sub-actions and the visible evidence that connects them. ActionTree-97k organizes that evidence into verified action trees. VideoTED uses those trees during post-training to guide token-level updates and teach reference responses.</p></div>
+  <figure class="figure"><a href="assets/figures/overview.png"><img loading="lazy" src="assets/figures/overview.png" width="3800" height="1608" alt="Paper overview with temporal order and object-state comparisons and two benchmark radar charts"></a><figcaption>Overview and representative cases.</figcaption></figure>
+  <details class="detail"><summary>Related work</summary><p>Prior work on fine-grained actions describes sub-motions, body states or compositional labels. VideoTED's tree makes the evidence–sub-action–activity links explicit for individual clips. Its training design combines token-level credit modulation on student samples with reference supervision when sampled answers fail.</p></details>
+</section>
+<section class="section band" id="dataset"><div class="shell">
+  <div class="section-lead"><p class="eyebrow"><span></span> ActionTree-97k</p><h2>From observations to activities</h2><p>Each Hierarchical Action Tree has visible observations at its leaves, sub-actions at its branches and an activity at its root. Uncertain details are recorded separately from confirmed evidence.</p></div>
+  <div class="dataset-figures">
+    <figure class="figure"><a href="assets/figures/action-tree.png"><img loading="lazy" src="assets/figures/action-tree.png" width="1842" height="1206" alt="Hierarchical action tree comparing pushing a pencil and placing a pen upright"></a><figcaption>Hierarchical action tree.</figcaption></figure>
+    <figure class="figure"><a href="assets/figures/concept-coverage.png"><img loading="lazy" src="assets/figures/concept-coverage.png" width="2773" height="2800" alt="Radial chart of ActionTree-97k concept coverage"></a><figcaption>ActionTree-97k concept coverage.</figcaption></figure>
+  </div>
+  <div class="dataset-grid">
+    <div class="panel"><h3>Verified examples by source</h3><table class="sources"><tbody>
+      <tr><th scope="row">K700</th><td>46,523</td></tr><tr><th scope="row">SSv2</th><td>37,209</td></tr><tr><th scope="row">UCF101</th><td>3,796</td></tr><tr><th scope="row">K710</th><td>3,782</td></tr><tr><th scope="row">HMDB51</th><td>3,215</td></tr><tr><th scope="row">LLaVA-ActivityNet</th><td>1,516</td></tr><tr><th scope="row">LLaVA-Charades</th><td>1,389</td></tr>
+    </tbody><tfoot><tr><th scope="row">Total</th><td>97,430</td></tr></tfoot></table></div>
+    <div class="panel"><h3>Generation and verification</h3><ol class="steps"><li>Generate four candidate trees from sampled frames without revealing the target label.</li><li>Check schema, visual observations and parent–child support. Verify the activity in a separate pass.</li><li>Build teacher context and a reference response from a retained tree, and filter overlaps with evaluation data.</li></ol><p>Human inspection found <strong>936 of 1,000</strong> sampled annotations acceptable. The paper reports zero shared videos across all eight evaluation benchmarks and zero shared novel classes across the four OVAR benchmarks.</p></div>
+  </div>
+</div></section>
+<section class="section" id="method">
+  <div class="shell">
+    <div class="section-lead"><p class="eyebrow"><span></span> Method</p><h2>Two ways to learn from verified evidence</h2><p>Each tree yields privileged context for a self-teacher and a separate reference response for the student. During inference, the student receives the video and question.</p></div>
+    <figure class="figure"><a href="assets/figures/training.png"><img loading="lazy" src="assets/figures/training.png" width="3800" height="1170" alt="Verified tree feeding Tree-Conditioned Credit Modulation and Reference Trajectory Learning"></a><figcaption>VideoTED training paths and joint objective.</figcaption></figure>
+    <div class="method-cards">
+      <article class="panel method-card tcm">
+        <span class="method-mark" aria-hidden="true">TCM</span>
+        <h3>Tree-Conditioned Credit Modulation</h3>
+        <h4>Teacher context</h4>
+        <p>The self-teacher reads the verified action tree and activity label alongside the video and question. It compares its scores with the student’s scores for tokens in the student’s sampled responses.</p>
+        <h4>Token-level updates</h4>
+        <p>Scores at the observation, sub-action and activity levels adjust how strongly each token is updated. The group reward determines the update direction.</p>
+      </article>
+      <article class="panel method-card rtl">
+        <span class="method-mark" aria-hidden="true">RTL</span>
+        <h3>Reference Trajectory Learning</h3>
+        <h4>Reference construction</h4>
+        <p>Each verified tree supplies a reference analysis and final answer. The student learns to produce that response from the video and question.</p>
+        <h4>Failure-aware weighting</h4>
+        <p>The reference loss increases with the squared group failure rate. Reference responses are trained separately from the sampled responses used for reward and advantage calculations.</p>
+      </article>
+    </div>
+    <details class="detail"><summary>Main VideoTED-7B training configuration</summary><p>Qwen2.5-VL-7B-Instruct, one epoch on 32 A800 GPUs (80 GB), AdamW with a cosine schedule and learning rate 1 × 10<sup>−6</sup>, BF16 with FSDP. Each update uses 32 prompts and four rollouts per prompt. Training video input uses 2 FPS, at most 16 frames, and a 100,352-pixel budget.</p><p>The initial TCM coefficient is 0.5 and decays over 1,000 steps. The teacher uses 0.99 EMA retention. The RTL coefficient is 0.1 and continues after TCM ends. Student prompt, teacher prompt, sampled response and reference limits are 16,384, 18,432, 768 and 1,024 tokens, respectively.</p></details>
+  </div>
+</section>
+<section class="section band" id="results">
+  <div class="shell">
+    <div class="section-lead"><p class="eyebrow"><span></span> Experiments</p><h2>Results across eight benchmarks</h2><p>VideoTED-7B improves on Qwen2.5-VL-7B across the four open-vocabulary datasets and all eight overall and action metrics reported for the general video benchmarks.</p></div>
+    <div class="results-box">
+      <div class="tabs" role="group" aria-label="Result views"><button data-result="ovar" aria-pressed="true">Action recognition</button><button data-result="general" aria-pressed="false">Video understanding</button><button data-result="ablation" aria-pressed="false">Ablations</button></div>
+      <div id="result-panel" aria-live="polite"></div>
+      <noscript><p>Enable JavaScript to view the benchmark results.</p></noscript>
+    </div>
+    <details class="detail" open><summary>Evaluation protocol</summary><p>In open-vocabulary action recognition, the model chooses a label from the base or novel partition of K400, HMDB51, UCF101 or SSv2. Evaluation reports each partition’s accuracy and their harmonic mean. In MVBench, Video-MME, TempCompass and the SEED-Bench video subset, the paper reports both the full benchmark score and a designated action-related score. Video-MME uses no subtitles.</p></details>
+    <div class="two-col analysis-grid">
+      <details class="detail" open><summary>Model and data scaling</summary><p>Post-training improves the reported metrics across Qwen2.5-VL-3B/7B and Qwen3-VL-4B/8B. The data sweep compares 25%, 50%, 75% and 100% of ActionTree-97k. The full-data 7B run clears the base model across the three plotted metrics.</p><a href="assets/figures/scaling.png"><img loading="lazy" src="assets/figures/scaling.png" width="3800" height="1932" alt="Model and data scaling results and training reward curves"></a></details>
+      <details class="detail" open><summary>Training dynamics and sensitivity</summary><p>When all sampled rewards match, the group-relative policy advantage vanishes. RTL supplies an independent reference objective when the group fails. The supplement compares coefficient choices, hierarchy shuffling and human inspection criteria.</p><a href="assets/figures/reference-dynamics.png"><img loading="lazy" src="assets/figures/reference-dynamics.png" width="2800" height="1302" alt="Training success, zero-advantage groups and the mean reference weight"></a></details>
+    </div>
+  </div>
+</section>
+<section class="section shell" id="cases">
+  <div class="section-lead"><p class="eyebrow"><span></span> Qualitative results</p><h2>Inspect the evidence</h2><p>Compare selected frames, ground truth and saved model outputs for temporal ordering, action direction and changes in object state. These examples show saved predictions and their supporting frames.</p></div>
+  <div class="cases-box"><div id="case-tabs" class="tabs" role="group" aria-label="Qualitative examples"></div><div id="case-panel" aria-live="polite"></div></div>
+  <details class="detail failure"><summary>Failure case: fast motion vs. fast playback</summary><p>On a TempCompass basketball clip played at normal speed, VideoTED interpreted motion blur and fast player movements as fast-forward playback. The supplement also notes that a correct final answer can include details that the sampled frames cannot fully establish.</p><a href="assets/figures/speed-failure.png"><img loading="lazy" src="assets/figures/speed-failure.png" width="2681" height="1089" alt="TempCompass playback speed failure with ground truth normal speed and model prediction fast-forward"></a></details>
+  <details class="detail"><summary>Limitations and future work</summary><p>Automatically verified trees can still carry annotation errors into both training paths. Fixed-rate frame sampling can miss brief contacts and intermediate states. The supplement discusses adaptive keyframe selection and explicit temporal or spatial grounding.</p></details>
+</section>
+<section class="section band" id="resources">
+  <div class="shell">
+    <div class="section-lead"><p class="eyebrow"><span></span> Resources</p><h2>Implementation and release status</h2></div>
+    <article class="panel"><h3>Code and reproduction</h3><p>The repository includes annotation, training, and evaluation code. The paper and model and data downloads are coming soon.</p><a href="https://github.com/0xiaoFu0/Video-TED">VideoTED on GitHub</a></article>
+  </div>
+</section>
+<section class="section shell citation" id="citation"><div class="section-lead"><p class="eyebrow"><span></span> Citation</p><h2>BibTeX</h2><p>Project reference.</p></div><div class="codebox"><button id="copy-citation" type="button">Copy BibTeX</button><pre id="bibtex">@misc{videoted,
+  title = {{VideoTED}: Tree-Guided Evidence Distillation for Open-Vocabulary Action Recognition},
+  url = {https://0xiaofu0.github.io/Video-TED/}
+}</pre><span id="copy-status" role="status"></span></div></section>
+</main>
+<footer><div class="shell"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><img src="assets/brand/tree.png" alt=""></span>VideoTED</a><span>VideoTED project page</span><a href="#top">Back to top</a></div></footer>
+</body>
+</html>
