@@ -1,0 +1,13 @@
+VideoTED
+
+The training runtime in verl/ is adapted from Self-Distilled RLVR (RLSD).
+https://github.com/iie-ycx/RLSD
+
+RLSD builds on EasyVideoR1, EasyR1, and veRL.
+https://github.com/cyuQ1n/EasyVideoR1
+https://github.com/hiyouga/EasyR1
+https://github.com/volcengine/verl
+
+Original copyright and license notices are retained in the source files.
+VideoTED adds action-tree conditioning, the reference-trajectory objective,
+and the action-recognition training recipe. See LICENSE for Apache-2.0.

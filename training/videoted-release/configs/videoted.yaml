@@ -1,0 +1,175 @@
+# VideoTED training recipe. train.sh supplies the dataset and base model.
+data:
+  train_files: ""
+  val_files: ""
+
+  prompt_key: prompt
+  truncation: left
+  answer_key: answer
+  image_key: images
+  video_key: videos
+  trajectory_key: null
+
+  image_dir: null
+  video_fps: 2.0
+  video_max_frames: 16
+  use_preprocessed_videos: false
+
+  image_min_pixels: 3136
+  image_max_pixels: 401408
+  video_min_pixels: 100352
+  video_max_pixels: 100352
+
+  max_prompt_length: 16384
+  max_response_length: 768
+  filter_overlong_prompts: false
+
+  rollout_batch_size: 32
+  mini_rollout_batch_size: null
+  val_batch_size: 32
+
+  format_prompt: configs/student.jinja
+  override_chat_template: null
+  shuffle: true
+  seed: 1
+
+algorithm:
+  adv_estimator: grpo
+  disable_kl: true
+  use_kl_loss: false
+  kl_penalty: low_var_kl
+  kl_coef: 0.0
+
+opsd:
+  ar_enabled: true
+  ar_alignment_mode: mesd
+  ar_teacher_update_mode: ema
+  ar_teacher_update_rate: 0.01
+  ar_teacher_update_interval: 1
+  ar_teacher_disable_after_step: 1000
+  ar_teacher_max_prompt_length: 18432
+  ar_reward_mode: protocol
+  ar_reference_coef: 0.1
+  ar_reference_kappa: 1.0
+  ar_reference_mode: clipped
+  ar_reference_clip: 0.2
+  ar_reference_max_length: 1024
+  # Include generated references marked unreviewed.
+  ar_allow_unreviewed_reference: true
+  # Compatibility alias only; EMA mode does not hard-copy the teacher.
+  rlsd_teacher_sync_interval: 1
+  rlsd_lambda_warmup_steps: 0
+  rlsd_lambda_decay_steps: 1000
+  use_gt_as_hint: true
+  teacher_hint_template: configs/teacher.jinja
+  freeze_teacher_model: true
+  enable_grpo_opsd_simple: true
+  rlsd_lambda: 0.5
+  rlsd_reweight_clip_range: 0.2
+
+worker:
+  actor:
+    global_batch_size: 32
+    micro_batch_size_per_device_for_update: 1
+    micro_batch_size_per_device_for_experience: 1
+    ppo_epochs: 1
+    max_grad_norm: 5.0
+    clip_ratio_low: 0.2
+    clip_ratio_high: 0.2
+
+    padding_free: true
+    dynamic_batching: false
+    loss_avg_mode: seq
+    ulysses_size: 1
+
+    model:
+      model_path: Qwen/Qwen2.5-VL-7B-Instruct
+      enable_gradient_checkpointing: true
+      trust_remote_code: false
+      freeze_vision_tower: false
+
+    optim:
+      lr: 1.0e-6
+      betas: [0.9, 0.999]
+      weight_decay: 0.01
+      strategy: adamw
+      lr_warmup_ratio: 0.0
+      lr_scheduler_type: cosine
+      min_lr_ratio: 0.0
+
+    fsdp:
+      enable_full_shard: true
+      enable_cpu_offload: false
+      enable_rank0_init: true
+      torch_dtype: fp32
+      mp_param_dtype: bf16
+      mp_reduce_dtype: fp32
+      mp_buffer_dtype: fp32
+
+    offload:
+      offload_params: false
+      offload_optimizer: false
+
+  rollout:
+    name: vllm
+    n: 4
+    temperature: 1.0
+    top_p: 0.95
+    top_k: 50
+    dtype: bf16
+
+    limit_images: 0
+    gpu_memory_utilization: 0.50
+    enforce_eager: false
+    enable_chunked_prefill: true
+    tensor_parallel_size: 1
+    # Resolve to prompt + response length (16384 + 768 = 17152 by default).
+    max_model_len: null
+    max_num_batched_tokens: 32768
+    disable_tqdm: true
+
+    val_override_config:
+      temperature: 0.0
+      n: 1
+
+  ref:
+    fsdp:
+      enable_full_shard: true
+      enable_cpu_offload: false
+      enable_rank0_init: true
+      torch_dtype: bf16
+      mp_param_dtype: bf16
+      mp_reduce_dtype: fp32
+      mp_buffer_dtype: fp32
+    offload:
+      offload_params: false
+
+  reward:
+    reward_function: verl/ar/reward.py:compute_score
+    reward_function_kwargs:
+      reward_mode: protocol
+
+trainer:
+  total_epochs: 1
+  max_steps: null
+
+  project_name: videoted
+  experiment_name: videoted
+
+  logger: ["console", "tensorboard"]
+
+  nnodes: 1
+  n_gpus_per_node: 8
+
+  max_try_make_batch: 20
+  val_freq: -1
+  val_before_train: false
+  val_only: false
+  val_generations_to_log: 10
+
+  save_freq: 100
+  save_limit: 30
+  save_model_only: false
+  save_checkpoint_path: null
+  load_checkpoint_path: null
+  find_last_checkpoint: false
