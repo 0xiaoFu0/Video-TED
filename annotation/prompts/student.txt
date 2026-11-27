@@ -1,3 +1,0 @@
-<video>
-What kind of human action is shown in the video?
-Organize the visible action evidence in a concise hierarchy inside <think>...</think>, using indentation: start with a broad activity, then group relevant observations under meaningful branches. Preserve supported coordination or temporal relationships and uncertainty; do not invent details. Use only branches supported by the video. End with <answer>action_class</answer>.

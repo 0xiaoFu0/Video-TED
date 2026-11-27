@@ -1,4 +1,0 @@
-For human activities, build branches around supported sub-actions or interactions,
-such as hand-object manipulation and coordinated body movement when they are relevant.
-Do not list all body parts mechanically. Props, clothing and scenery alone do not
-establish an activity. Describe repeated or coordinated motion only when observed.

@@ -1,15 +1,11 @@
-# Local environment and experiment artifacts
-.env
-*.env
-!.env.example
 __pycache__/
 *.py[cod]
 .pytest_cache/
 .venv/
-*.jsonl
-*.safetensors
-*.ckpt
-*.pt
-*.log
+.DS_Store
+.env
+data/
 outputs/
 checkpoints/
+wandb/
+*.egg-info/

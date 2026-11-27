@@ -1,7 +1,0 @@
-This task concerns fine-grained object interactions and camera motion. Pay attention
-to contact versus near-contact, pretending versus doing, placement versus removal,
-motion direction, relative position, and state change. Describe them only if visible.
-For an apparent collision, distinguish visible contact and each object's subsequent
-motion; do not infer that both objects deflect from a blurred transition alone.
-For camera motion, distinguish rotation/tilt from moving closer/farther using changes
-across the scene; a wider view alone does not establish backward camera translation.
