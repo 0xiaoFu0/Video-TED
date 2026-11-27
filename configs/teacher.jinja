@@ -1,0 +1,6 @@
+{{ question | trim }}
+
+Training-only reference context:
+{{ hint | trim }}
+
+Use this context to interpret the video. Preserve uncertainty and do not turn class priors into observed events. Give a concise indented action hierarchy inside <think>...</think>, followed by <answer>action_class</answer>. The <action_tree> tags in the reference context mark evidence only; your response must use <think>...</think>.

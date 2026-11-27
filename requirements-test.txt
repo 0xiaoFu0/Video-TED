@@ -1,0 +1,11 @@
+# CPU regression checks. No CUDA, FlashAttention or vLLM is needed.
+pytest>=8
+numpy
+PyYAML
+codetiming
+packaging
+omegaconf>=2.3,<2.4
+torch==2.8.0
+torchvision==0.23.0
+transformers==4.57.3
+safetensors
